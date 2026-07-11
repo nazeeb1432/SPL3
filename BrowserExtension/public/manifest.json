@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "DIY-MOD Extension",
+  "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy4eyaqrAd7awBnVlKv6ITY1kGzQpr14nsMg3TAgasaYL+yMAjL3dL2DUJkuJtppWazqkFlMMW04fR/ZkLkYk/N2JwLaq7wOMTzST0fk+OWfF3y3mx1+0FAAskHGFWtUEIgKMwhomnO/ENbcmJTd1B+FIqiK+/8pXC3MDwNQF1gRf6GGqiZFj3QF4SRv4hxNFvzoTs0C4M8oJdXubZXkScFT57woklqsQesmhe892Sbt1OEKgDaT/qAsCqQs/SNbm3K9pUM/iol0LgJ/uP6jV9pUOlM5TSk0vN6yisLQstJjPMkWbYPXwUswlZPbmcYsCClEHWmhoGS7/dOgYjjNOtwIDAQAB",
+  "description": "Content filtering for social media platforms",
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "webRequest",
+    "scripting",
+    "identity",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.twitter.com/*",
+    "*://*.x.com/*",
+    "*://*.reddit.com/*",
+    "http://localhost:8001/*",
+    "http://127.0.0.1:8001/*",
+    "https://diymod.s3.us-east-2.amazonaws.com/*",
+    "https://diy-mod.s3.us-east-2.amazonaws.com/*"
+  ],
+  "oauth2": {
+    "client_id": "740189918174-adviq1icf9opl5ucjgc48lnbcdlav61k.apps.googleusercontent.com", 
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "background": {
+    "service_worker": "src/background/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*", "*://*.x.com/*", "*://*.reddit.com/*"],
+      "js": ["src/content/content-script.js"],
+      "css": ["src/content/content-styles.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js", "icons/*", "src/content/content-styles.css"],
+      "matches": ["*://*.twitter.com/*", "*://*.x.com/*", "*://*.reddit.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/64.png",
+    "128": "icons/128.png"
+  }
+}

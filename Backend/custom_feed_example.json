@@ -1,0 +1,38 @@
+
+{ 
+  "posts": [
+      {
+        "id": "retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/birds/comments/1md2o0a/type_of_bird/",
+        "text_filter": "blur",
+        "image_filter": "replacement"
+      },
+      {
+        "id": "retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/ukraine/comments/1mbg4dk/three_years_later_it_still_hurts_the_same_people/",
+        "text_filter": "overlay",
+        "image_filter": "stylization"
+      },
+      {
+        "id": "retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/Musk/comments/1hdxwp4/no_freedom_of_speech_on_x_twitter_here_is_you/",
+        "text_filter": "rewrite"
+      },
+      {
+        "id": "retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/birds/comments/1m5i6li/update_to_baby_from_cats_mouth/",
+        "text_filter": "blur",
+        "image_filter": "replacement"
+      },
+      {
+        "id": "retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/Dentistry/comments/1lr7zh1/5_surface_anterior_composite_documentation/"
+      },
+      {
+        "id":"retrieve_reddit_post",
+        "post_url": "https://www.reddit.com/r/Dentistry/comments/1lv6h3i/crazy_ass_shit_we_find_in_egypt/",
+        "image_filter": "occlusion"
+      }
+
+    ]
+  }

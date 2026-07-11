@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY-MOD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../../public/icons/128.png" alt="DIY-MOD Icon" class="logo-icon">
+      <img src="../../public/icons/logo_text.png" alt="DIY-MOD Text" class="logo-text">
+      <div class="connection-status" id="websocket-status" title="WebSocket connection status">
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="user-section">
+        <!-- Signed in state -->
+        <div id="user-info" style="display: none;">
+          <div class="user-profile">
+            <img id="user-avatar" src="" alt="Profile" class="avatar">
+            <!-- <div class="user-details">
+              <div id="user-name"></div>
+            </div> -->
+            <button id="sign-out" class="sign-out-btn" title="Sign out">
+              <i class="fas fa-sign-out-alt"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Sign in prompt -->
+        <div id="sign-in-prompt" style="display: none;">
+          <button id="sign-in" class="btn btn-primary">
+            <i class="fab fa-google"></i> Sign in
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="feedback" class="feedback"></div>
+    
+    <!-- App footer with user profile and manage preferences -->
+    <!-- <div class="app-footer">
+      
+    </div> -->
+    
+    <div class="chat-container">
+      <div class="chat-controls">
+        <button id="openOptions" class="options-btn">
+          <i class="fas fa-cog"></i> Options
+        </button>
+        <button id="showFilters" class="show-filters-btn">
+          <i class="fas fa-filter"></i> My Filters
+        </button>       
+        <button id="newChatBtn" class="new-chat-btn" title="Start a new chat">
+          <i class="fas fa-plus-circle"></i> New Chat
+        </button>
+      </div>
+      <div id="chatArea" class="chat-area"></div>
+      <div id="optionsArea" class="options-area"></div>
+      <div class="input-group">
+        <textarea id="wordInput" class="auto-resize" placeholder="What's affecting you today?"></textarea>
+        <div class="input-actions">
+          <button id="imageUploadBtn" class="attachment-btn" title="Attach Image">
+            <i class="fas fa-paperclip"></i>
+          </button>
+          <button id="submitBtn" class="send-btn" title="Send">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" style="display: none">
+      </div>
+    </div>
+    
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="trendingToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="switch-label">Show Trending</span>
+    </div>
+    
+    <div class="suggestions" id="suggestions"></div>
+  </div>
+
+  <script type="module" src="./popup.ts"></script>
+</body>
+</html>

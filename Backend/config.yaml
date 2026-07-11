@@ -1,0 +1,63 @@
+llm:
+  content_model: "gpt-4o-mini"
+  filter_model: "gpt-4o"
+  chat_model: "gpt-4o"
+  temperature: 0.1
+  max_tokens: 1000
+
+processing:
+  parallel_workers: 4
+  cache_timeout: 60
+  default_mode: "balanced"
+  default_intensity: 3
+  image_processing:
+    enabled: true
+    max_posts_with_images: 25
+    max_images_per_post: 10
+  reddit_specific:
+    enabled: true
+    reddit_max_carousel_images: 1
+    process_video_thumbnails: false
+  twitter_specific:
+    enabled: true
+    twitter_max_carousel_images: 1
+    process_video_thumbnails: false
+database:
+  url: "sqlite:///filters.db"
+  pool_size: 5
+  max_overflow: 10
+
+logging:
+  level: "INFO"
+  file: "debug.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+external_services:
+  image_processing_api:
+    url: "https://42ca-35-3-209-0.ngrok-free.app/"
+    timeout: 30
+
+testing:
+  create_default_filters: false  # Whether to create test filters for new users
+  default_filters:  # List of default filters to create for new users
+    - filter_text: "Trump"
+      content_type: "text"
+      filter_type: "entity"
+      intensity: 1
+      is_temporary: false
+      filter_metadata:
+        source: "test"
+    - filter_text: "Elon Musk" 
+      content_type: "text"
+      filter_type: "entity"
+      intensity: 3
+      is_temporary: false
+      filter_metadata:
+        source: "test"
+    - filter_text: "Ukraine Russia War" 
+      content_type: "all"
+      filter_type: "entity"
+      intensity: 5
+      is_temporary: false
+      filter_metadata:
+        source: "test"

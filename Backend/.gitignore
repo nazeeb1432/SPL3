@@ -1,0 +1,6 @@
+.idea
+data/*
+venv
+.env
+*/.DS_Store
+

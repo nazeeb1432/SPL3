@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIY-MOD Settings</title>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="options-page">
+    <div class="container">
+        <h1>DIY-MOD Settings</h1>
+        
+        <nav class="quick-nav">
+            <a href="#user-account">User Account</a>
+            <a href="#visual-settings">Visual Settings</a>
+            <a href="#default-settings">Default Settings</a>
+            <a href="#filter-management">Filter Management</a>
+            <a href="#server-settings">Server Settings</a>
+        </nav>
+        
+        <!-- User Account Section -->
+        <section id="user-account" class="settings-section">
+            <h2>User Account</h2>
+            <div id="user-info" class="setting-item" style="display: none;">
+                <div class="user-profile">
+                    <img id="user-avatar" src="" alt="Profile" class="user-avatar">
+                    <div class="user-details">
+                        <span id="user-name" class="user-name"></span>
+                        <span id="user-email" class="user-email"></span>
+                    </div>
+                </div>
+                <button id="sign-out" class="secondary-button">Sign Out</button>
+            </div>
+            <div id="sign-in-prompt" class="setting-item">
+                <p>Sign in with Google to sync your settings and filters across devices.</p>
+                <button id="sign-in" class="primary-button">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </button>
+            </div>
+        </section>
+        
+        <section id="visual-settings" class="settings-section">
+            <h2>Visual Settings</h2>
+            <div class="setting-group">
+                <h3>Blur Effect</h3>
+                <div class="setting-item">
+                    <label>Intensity:</label>
+                    <input type="range" id="blurIntensity" min="4" max="15" value="8">
+                    <span id="blurValue">8px</span>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="blurHoverEffect" checked>
+                        Show content on hover
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Content Borders</h3>
+                <div class="setting-item border-controls">
+                    <div class="border-section">
+                        <label>Warning Overlay:</label>
+                        <input type="color" id="overlayBorderColor" value="#0077ff">
+                        <input type="number" id="overlayBorderWidth" min="0" max="5" value="1" class="width-input">
+                        <span class="unit">px</span>
+                        <input type="checkbox" id="showOverlayBorder" checked>
+                        <label for="showOverlayBorder">Show border</label>
+                    </div>
+                    <div class="border-section">
+                        <label>Rewritten Content:</label>
+                        <input type="color" id="rewriteBorderColor" value="#ffd700">
+                        <input type="number" id="rewriteBorderWidth" min="0" max="5" value="1" class="width-input">
+                        <span class="unit">px</span>
+                        <input type="checkbox" id="showRewriteBorder" checked>
+                        <label for="showRewriteBorder">Show border</label>
+                    </div>
+                    <div class="sync-borders">
+                        <input type="checkbox" id="syncBorders">
+                        <label for="syncBorders">Sync warning borders with rewritten content</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <h3>Overlay Style</h3>
+                <div class="setting-item">
+                    <select id="overlayStyle">
+                        <option value="dark">Dark Overlay</option>
+                        <option value="light">Light Overlay</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        
+        <section id="default-settings" class="settings-section">
+            <h2>Default Filter Settings</h2>
+            <div class="setting-item">
+                <label>Default Content Type:</label>
+                <select id="defaultContentType">
+                    <option value="all">Both Text and Images</option>
+                    <option value="text">Text Only</option>
+                    <option value="image">Images Only</option>
+                </select>
+                <p class="description">Default content type when creating new filters</p>
+            </div>
+            
+            <div class="setting-item">
+                <label>Default Duration:</label>
+                <select id="defaultDuration">
+                    <option value="day">24 Hours</option>
+                    <option value="week">1 Week</option>
+                    <option value="month">1 Month</option>
+                    <option value="permanent">Permanent</option>
+                </select>
+                <p class="description">Default duration when creating new filters</p>
+            </div>
+        </section>
+
+        <section id="filter-management" class="settings-section">
+            <h2>Filter Management</h2>
+            
+            <div class="filter-controls">
+                <button id="refreshFilters" class="secondary-button">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <button id="createFilter" class="primary-button">
+                    <i class="fas fa-plus"></i> New Filter
+                </button>
+            </div>
+            
+            <div id="filters-loading" class="loading-indicator">
+                <span class="spinner"></span> Loading filters...
+            </div>
+            
+            <div id="no-filters" class="no-data-message" style="display: none;">
+                <p>You don't have any filters yet. Create one to get started.</p>
+            </div>
+            
+            <div class="filter-table-container">
+                <table id="filters-table" class="data-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Filter Text</th>
+                            <th>Content Type</th>
+                            <th>Intensity</th>
+                            <th>Duration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="filters-list">
+                        <!-- Filter rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="setting-item export-import-section">
+                <button id="exportFilters">Export Filters</button>
+                <button id="importFilters">Import Filters</button>
+                <input type="file" id="importInput" style="display: none" accept=".json">
+                <button id="clearAllFilters" class="danger">Clear All Filters</button>
+            </div>
+            <div class="setting-item">
+                
+            </div>
+        </section>
+        
+        <section id="server-settings" class="settings-section">
+            <h2>Server Settings</h2>
+            <!-- Hidden API Base URL input -->
+            <div class="setting-item">
+                <label>API Base URL:   <span id="apiBaseUrl" class="api-url-display"></span></label>
+                <p class="description">
+                    Server address for API communication
+                </p>
+            </div>
+
+            <div class="setting-item">
+                <button id="testConnection">Test Connection</button>
+                <span id="connectionStatus"></span>
+            </div>
+            
+            <!-- <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="batchingEnabled" checked>
+                    Enable request batching
+                </label>
+                <p class="description">
+                    Batch similar requests together to reduce overhead and improve performance.
+                </p>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="parallelRequestsEnabled" checked>
+                    Enable parallel processing
+                </label>
+                <p class="description">
+                    Process multiple items in parallel for better performance.
+                </p>
+            </div>
+            <div class="setting-item">
+                <label>Maximum parallel requests:</label>
+                <input type="number" id="maxParallelRequests" min="1" max="10" value="5">
+                <p class="description">
+                    Maximum number of requests to process simultaneously.
+                </p>
+            </div> -->
+
+        <!-- <section id="user-settings" class="settings-section">
+            <h2>User ID Settings</h2>
+            <div class="setting-item">
+                <label>User ID:</label>
+                <div class="user-id-container">
+                    <input type="text" id="userId" readonly>
+                    <button id="copyUserId" title="Copy to clipboard">📋</button>
+                    <button id="regenerateUserId" title="Generate new ID">🔄</button>
+                </div>
+            </div>
+        </section> --> 
+
+        <div class="status-bar">
+            <button id="saveSettings">Save Settings</button>
+            <span id="saveStatus"></span>
+            <button id="resetDefaults">Reset to Defaults</button>
+        </div>
+    </div>
+    
+    <!-- Filter Creation/Edit Modal -->
+    <div id="filter-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Create New Filter</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="filter-form">
+                    <input type="hidden" id="filter-id" value="">
+                    
+                    <div class="form-group">
+                        <label for="filter-text">Filter Text:</label>
+                        <input type="text" id="filter-text" required placeholder="Enter text to filter">
+                        <p class="field-help">Content containing this text will be filtered</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content-type">Apply To:</label>
+                        <select id="content-type" required>
+                            <option value="all">Text & Images</option>
+                            <option value="text">Text Only</option>
+                            <option value="image">Images Only</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="intensity">Intensity:</label>
+                        <div class="range-with-labels">
+                            <span>Low</span>
+                            <input type="range" id="intensity" min="1" max="5" value="3" step="1">
+                            <span>High</span>
+                        </div>
+                        <p class="field-help">Higher intensity means more content will match this filter</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="duration">Duration:</label>
+                        <select id="duration" required>
+                            <option value="day">24 Hours</option>
+                            <option value="week">1 Week</option>
+                            <option value="month">1 Month</option>
+                            <option value="permanent">Permanent</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancel-filter" class="secondary-button">Cancel</button>
+                        <button type="submit" id="save-filter" class="primary-button">Save Filter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="./options.ts"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "name": "diy-mod-extension",
+    "version": "1.0.0",
+    "description": "Content filtering for social media platforms",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build && vite build --config interceptor.config.js && node fix-manifest.js",
+        "preview": "vite preview",
+        "fix-manifest": "node fix-manifest.js"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "@types/node": "^22.13.9",
+        "@types/webextension-polyfill": "^0.10.7",
+        "typescript": "^5.2.2",
+        "vite": "^7.0.4",
+        "vite-plugin-web-extension": "^4.4.3"
+    },
+    "dependencies": {
+        "webextension-polyfill": "^0.10.0",
+        "zustand": "^4.4.6"
+    }
+}

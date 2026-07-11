@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY-MOD - Content Moderation Extension</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #4a90e2;
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature-item p {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #1976d2;
+            margin: 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 10px 0;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #357abd;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+        }
+
+        .step {
+            counter-increment: step-counter;
+            margin-bottom: 30px;
+            padding-left: 60px;
+            position: relative;
+        }
+
+        .step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4a90e2;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">DIY</div>
+            <h1>DIY-MOD Extension</h1>
+            <p class="subtitle">Personalized content moderation through natural language filter creation</p>
+        </div>
+
+        <!-- How to Set Filters -->
+        <div class="section">
+            <h2>Setting Up Your Filters</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="images/chat-interface.png" alt="Chat interface for filter creation">
+                    <h3>Chat Interface</h3>
+                    <p>Create filters using natural language. Simply describe what content you want to filter in conversational terms.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/filter-config.png" alt="Filter configuration panel">
+                    <h3>Filter Configuration</h3>
+                    <p>Customize intensity and duration settings. Set filters to be temporary or permanent based on your needs.</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>Getting Started</h4>
+                <p>Click the DIY-MOD extension icon in your browser toolbar to access the chat interface and options panel.</p>
+            </div>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="section">
+            <h2>What to Expect</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Processing Delay</h3>
+                    <p>Content filtering involves AI processing, which may take a few moments. You'll see loading indicators during this time.</p>
+                </div>
+                <div class="step">
+                    <h3>Works on Text & Images</h3>
+                    <p>The extension processes both textual content and images on supported platforms (Reddit, X/Twitter).</p>
+                </div>
+                <div class="step">
+                    <h3>Account Optional</h3>
+                    <p>You can use DIY-MOD without logging in. Sign in with Google to sync settings across devices.</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>Performance Note</h4>
+                <p>Initial processing may be slower as the system learns your preferences. Performance improves with use.</p>
+            </div>
+        </div>
+
+        <!-- Intervention Examples -->
+        <div class="section">
+            <h2>How Interventions Look</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="images/content-warning.png" alt="Content warning overlay">
+                    <h3>Content Warnings</h3>
+                    <p>Sensitive content is covered with customizable warning overlays. Click to reveal if desired.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/modified-content.png" alt="Content modification example">
+                    <h3>Content Modification</h3>
+                    <p>Text and images can be altered or replaced based on your filter settings. Modified content is clearly marked.</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>Visual Markers</h4>
+                <p>All modified content includes visible markers (like "MOD" tags) so you know when content has been processed by your filters.</p>
+                
+            </div>
+        </div>
+
+        <!-- Filter Sharing -->
+        <div class="section">
+            <h2>Sharing Filters</h2>
+            <p>Share your filter configurations with others or import filters from the community:</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <h3>Export Filters</h3>
+                    <p>Go to the Options page (right-click the extension icon → Options) to export your filter settings as a shareable file.</p>
+                </div>
+                <div class="step">
+                    <h3>Import Filters</h3>
+                    <p>Use the import function in Options to load filter configurations shared by others or backed up previously.</p>
+                </div>
+                <div class="step">
+                    <h3>Use Cases</h3>
+                    <p>Share filters with friends, backup your settings, or try community-created filter sets for common sensitivities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Started -->
+        <div class="section" style="text-align: center;">
+            <h2>Ready to Start?</h2>
+            <p style="margin-bottom: 30px;">Click the DIY-MOD icon in your browser toolbar to begin creating your first filter.</p>
+            <a href="#" class="button" onclick="openExtension()">Open Extension</a>
+        </div>
+    </div>
+
+    <script>
+        function openExtension() {
+            alert('To open DIY-MOD:\n\n1. Look for the DIY-MOD icon in your browser toolbar\n2. Click the icon to open the popup\n3. Start by describing content you want to filter\n\nIf you don\'t see the icon, click the Extensions button (puzzle piece) and pin DIY-MOD.');
+        }
+    </script>
+</body>
+</html>
