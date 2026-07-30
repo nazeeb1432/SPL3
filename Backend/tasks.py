@@ -9,6 +9,12 @@ import logging
 import base64
 import hashlib
 from io import BytesIO
+
+# Load environment variables first with override to ensure .env takes precedence
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'), override=True)
+
+
 from celery import Celery, group, chord
 from ml_models.base import ImageModel
 from ml_models.openai_models import OpenAIModel
@@ -18,9 +24,7 @@ from interventions import replacement, stylization, occlusion, blur, shrink, inp
 from utils.storage import storage_manager # Use the singleton instance
 from ServerCache import image_cache
 
-# Load environment variables first with override to ensure .env takes precedence
-from dotenv import load_dotenv
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'), override=True)
+
 
 from settings import OPENAI_API_KEY, GOOGLE_API_KEY  # optional, but at least triggers load_dotenv()
 

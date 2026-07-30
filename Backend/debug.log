@@ -1,0 +1,6 @@
+2026-07-30 23:53:55,057 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-30 23:53:55,061 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-30 23:53:55,061 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-30 23:53:55,061 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-30 23:53:55,062 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-30 23:53:55,062 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
