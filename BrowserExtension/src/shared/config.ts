@@ -101,8 +101,8 @@ export const config: Config = {
     feedbackURL: 'https://rayhan.io/diymod.github.io/feedback/', // Optional URL for feedback form
   },
   api: {
-    baseUrl: 'https://api.xxxxxx.io', //'https://api.xxxxxx.io',  // 127.0.0.1:8001 for local testing
-    pollingBaseUrl: 'https://api.xxxxxx.io', // 'https://api.xxxxxx.io', // For polling image results, using local endpoint for now
+    baseUrl: 'http://127.0.0.1:8001', // 'https://api.xxxxxx.io',  // 127.0.0.1:8001 for local testing
+    pollingBaseUrl: 'http://127.0.0.1:8001', // 'https://api.xxxxxx.io', // For polling image results, using local endpoint for now
     websocketUrl: 'ws://127.0.0.1:8010/ws', // WebSocket endpoint
     endpoints: {
       // Match the original vanilla implementation endpoints exactly

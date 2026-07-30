@@ -4,3 +4,46 @@
 2026-07-30 23:53:55,061 - __main__ - INFO - DIY-MOD server initialized successfully
 2026-07-30 23:53:55,062 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
 2026-07-30 23:53:55,062 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 00:32:20,061 - database.operations - INFO - Created new user 104225399876121148596 in database
+2026-07-31 00:32:20,064 - database.operations - INFO - Found 0 active filters for user 104225399876121148596
+2026-07-31 00:32:20,065 - __main__ - INFO - Loaded 0 filters for user 104225399876121148596
+2026-07-31 00:32:24,835 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:32:24,840 - database.operations - INFO - Found 0 active filters for user 104225399876121148596
+2026-07-31 00:32:24,841 - __main__ - INFO - Loaded 0 filters for user 104225399876121148596
+2026-07-31 00:32:39,665 - __main__ - INFO - Received ping from extension
+2026-07-31 00:32:54,680 - database.operations - INFO - Created new user 49wchjxuz55user_z967cttav5 in database
+2026-07-31 00:32:54,682 - database.operations - INFO - Found 0 active filters for user 49wchjxuz55user_z967cttav5
+2026-07-31 00:32:54,684 - __main__ - INFO - Loaded 0 filters for user 49wchjxuz55user_z967cttav5
+2026-07-31 00:33:07,937 - database.operations - INFO - Found existing user 49wchjxuz55user_z967cttav5 (created: 2026-07-30 18:32:54, last active: now())
+2026-07-31 00:33:07,940 - database.operations - INFO - Found 0 active filters for user 49wchjxuz55user_z967cttav5
+2026-07-31 00:33:07,941 - __main__ - INFO - Loaded 0 filters for user 49wchjxuz55user_z967cttav5
+2026-07-31 00:33:28,248 - database.operations - INFO - Updated email for user 104225399876121148596 to bsse1432@iit.du.ac.bd
+2026-07-31 00:33:28,272 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:33:28,274 - database.operations - INFO - Found 0 active filters for user 104225399876121148596
+2026-07-31 00:33:28,274 - __main__ - INFO - Loaded 0 filters for user 104225399876121148596
+2026-07-31 00:33:33,084 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:33:33,087 - database.operations - INFO - Found 0 active filters for user 104225399876121148596
+2026-07-31 00:34:39,702 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:34:39,709 - database.operations - INFO - Found 0 active filters for user 104225399876121148596
+2026-07-31 00:36:08,490 - __main__ - INFO - Received ping from extension
+2026-07-31 00:36:23,139 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:36:23,145 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:36:23,146 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:36:29,715 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:36:29,720 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:36:29,721 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:37:02,242 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:37:02,244 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:37:02,244 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:42:50,337 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:42:50,340 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:42:50,341 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:42:52,876 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:42:52,879 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:42:52,881 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:42:56,527 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:42:56,530 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:42:56,531 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:42:58,594 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:42:58,597 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:42:58,598 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
