@@ -287,6 +287,23 @@ def run_scoring_and_find_best_batch(batch_results: list, source_url: str, user_c
 
 
 
+def _resolve_scorable_image_url(url: str) -> str:
+    """
+    VLM scoring APIs (OpenAI, Gemini) fetch image URLs from their own servers,
+    so a 'localhost'/'127.0.0.1' URL from local file storage is unreachable to them.
+    Convert those to inline base64 data URLs; leave publicly-reachable URLs (S3, Reddit CDN) as-is.
+    """
+    if url and ("localhost:8001" in url or "127.0.0.1:8001" in url):
+        try:
+            relative_path = url.split("8001/", 1)[1]
+            with open(relative_path, "rb") as f:
+                encoded = base64.b64encode(f.read()).decode("utf-8")
+            return f"data:image/png;base64,{encoded}"
+        except Exception as e:
+            logger.error(f"Failed to inline local image for scoring: {e}")
+    return url
+
+
 @app.task
 def score_intervention(score_provider: str, original_url: str, candidate_result: dict, user_context: dict, scoring_strategy: str = "single_stage") -> dict:
     """
@@ -294,7 +311,8 @@ def score_intervention(score_provider: str, original_url: str, candidate_result:
     It now receives the full result dictionary from the generation task.
     """
     intervention_name = candidate_result['intervention_name']
-    candidate_url = candidate_result['processed_url']
+    candidate_url = _resolve_scorable_image_url(candidate_result['processed_url'])
+    original_url = _resolve_scorable_image_url(original_url)
 
     try:
         scorer_model = MODEL_REGISTRY[score_provider]

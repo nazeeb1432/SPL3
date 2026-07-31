@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": "reddit_post_1",
+      "post_url": "https://www.reddit.com/r/gastricsleeve/comments/1lwktko/",
+      "text_filter": "none",
+      "image_filter": "none"
+    },
+    {
+      "id": "custom_text_post",
+      "post_type": "text",
+      "title": "My Custom Text Post",
+      "body": "This is a custom post created directly in the JSON file. It can contain any text content you want to include in your feed.",
+      "author": "MyUsername",
+      "subreddit": "mycustomfeed",
+      "text_filter": "blur",
+      "image_filter": "none"
+    },
+    {
+      "id": "reddit_post_2",
+      "post_url": "https://reddit.com/r/gastricsleeve/comments/1e3tkr4/",
+      "text_filter": "overlay",
+      "image_filter": "cartoonish"
+    },
+    {
+      "id": "custom_image_post",
+      "post_type": "image",
+      "title": "Beautiful Sunset Photo",
+      "body": "Check out this amazing sunset I captured yesterday!",
+      "media": [
+        "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869"
+      ],
+      "author": "PhotoLover",
+      "subreddit": "photography",
+      "text_filter": "none",
+      "image_filter": "blur"
+    },
+    {
+      "id": "custom_gallery_post",
+      "post_type": "gallery",
+      "title": "My Travel Photos Collection",
+      "body": "Here are some photos from my recent trip",
+      "media": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+      ],
+      "author": "TravelBlogger",
+      "subreddit": "travel",
+      "text_filter": "rewrite",
+      "image_filter": "overlay"
+    }
+  ]
+}

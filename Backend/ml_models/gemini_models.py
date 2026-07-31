@@ -46,7 +46,7 @@ class GeminiModel(ImageModel):
         )
         return response.text
 
-    def generate_from_prompt(self, prompt: str, model_name: str = "gemini-2.0-flash-preview-image-generation", size: str = "1024x1024") -> str:
+    def generate_from_prompt(self, prompt: str, model_name: str = "gemini-2.5-flash-image", size: str = "1024x1024") -> str:
         """
         Generates an image based on a textual prompt.
         Note: Gemini image generation API details might differ. This is a conceptual implementation.
@@ -56,7 +56,7 @@ class GeminiModel(ImageModel):
         # The actual API call might be different.
         raise NotImplementedError("Gemini image generation from prompt is not implemented in this example.")
 
-    def edit_image(self, image_bytes: bytes, prompt: str, model_name: str = "gemini-2.0-flash-preview-image-generation") -> bytes:
+    def edit_image(self, image_bytes: bytes, prompt: str, model_name: str = "gemini-2.5-flash-image") -> bytes:
         """
         Edits an existing image based on a textual prompt using Gemini.
         """

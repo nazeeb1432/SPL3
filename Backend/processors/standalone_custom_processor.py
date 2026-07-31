@@ -25,7 +25,6 @@ from custom_feed_models_pkg.custom_feed_models import (
     CustomFeedAutoFilterRequest
 )
 # from custom_interventions.intervention_engine import InterventionEngine
-from CartoonImager import make_image_cartoonish, make_image_replacement_gemini
 from ServerCache import image_cache
 from database import get_user_filters
 from llm import ContentFilter

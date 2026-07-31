@@ -47,3 +47,746 @@
 2026-07-31 00:42:58,594 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
 2026-07-31 00:42:58,597 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
 2026-07-31 00:42:58,598 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 00:52:48,199 - __main__ - INFO - Received ping from extension
+2026-07-31 00:55:23,744 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 00:55:26,277 - utils.errors - ERROR - Unexpected API error in process_custom_feed: No module named 'CartoonImager'
+Traceback (most recent call last):
+  File "/Users/nazeebahmed/Desktop/SHIELD/Backend/utils/errors.py", line 76, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nazeebahmed/Desktop/SHIELD/Backend/app.py", line 959, in process_custom_feed
+    from processors.standalone_custom_processor import process_custom_feed_request
+  File "/Users/nazeebahmed/Desktop/SHIELD/Backend/processors/standalone_custom_processor.py", line 28, in <module>
+    from CartoonImager import make_image_cartoonish, make_image_replacement_gemini
+ModuleNotFoundError: No module named 'CartoonImager'
+2026-07-31 00:58:18,238 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 00:58:18,242 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 00:58:29,724 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 00:58:29,729 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 00:58:29,731 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 00:58:29,731 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 00:58:29,733 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 00:58:29,734 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 00:59:09,064 - __main__ - INFO - Received ping from extension
+2026-07-31 00:59:17,081 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 00:59:27,687 - __main__ - INFO - Processing custom-feed with session: 139fd1b0843a368d1b441bce0c916b76
+2026-07-31 00:59:27,687 - processors.standalone_custom_processor - INFO - process_custom_feed_request called with session_id: 139fd1b0843a368d1b441bce0c916b76, 5 posts
+2026-07-31 00:59:27,715 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 00:59:27,722 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 00:59:27,726 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 00:59:27,727 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 00:59:27,727 - processors.base_processor - INFO - Initialized StandaloneCustomProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 00:59:27,727 - processors.standalone_custom_processor - INFO - Initialized StandaloneCustomProcessor for session 139fd1b0843a368d1b441bce0c916b76 with 5 posts
+2026-07-31 00:59:27,727 - processors.standalone_custom_processor - INFO - Starting work_on_feed with 5 posts
+2026-07-31 00:59:27,729 - processors.standalone_custom_processor - INFO - Created 5 CustomPost objects
+2026-07-31 00:59:27,729 - processors.standalone_custom_processor - INFO - Starting parallel processing of 5 posts
+2026-07-31 00:59:27,729 - processors.standalone_custom_processor - INFO - Created 5 tasks, waiting for completion...
+2026-07-31 00:59:31,480 - FilterUtils.FilterUtils - WARNING - No suitable filter found.
+2026-07-31 00:59:31,629 - FilterUtils.FilterUtils - WARNING - No suitable filter found.
+2026-07-31 00:59:31,632 - processors.standalone_custom_processor - INFO - All tasks completed, processing results...
+2026-07-31 00:59:31,633 - processors.standalone_custom_processor - INFO - Returning 5 processed posts
+2026-07-31 00:59:31,633 - processors.standalone_custom_processor - INFO - Processed 5 posts
+2026-07-31 00:59:31,637 - processors.standalone_custom_processor - INFO - Returning 5 ProcessedPost objects
+2026-07-31 00:59:31,638 - processors.standalone_custom_processor - INFO - process_custom_feed_request completed with 5 processed posts
+2026-07-31 00:59:31,651 - database.operations - INFO - Saved custom feed 'User Study Feed (Original)' for user 104225399876121148596, ID: 1
+2026-07-31 00:59:31,656 - database.operations - INFO - Saved custom feed 'User Study Feed (v_alpha)' for user 104225399876121148596, ID: 2
+2026-07-31 01:00:29,777 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:31,977 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:34,178 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:35,505 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:40,930 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:44,989 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:47,096 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:00:56,044 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:02:10,283 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:02:11,809 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:02:12,543 - __main__ - INFO - User logged in: 104225399876121148596 (bsse1432@iit.du.ac.bd)
+2026-07-31 01:11:13,415 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 01:11:13,421 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 01:11:13,422 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 01:35:26,498 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 01:35:26,503 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 09:03:54,897 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 09:03:54,906 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 09:03:54,906 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 09:03:54,907 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 09:03:54,908 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 09:03:54,909 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 09:04:39,162 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:04:39,167 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:04:39,168 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 09:04:41,942 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:04:41,944 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:04:41,945 - __main__ - INFO - Loaded 1 filters for user 104225399876121148596
+2026-07-31 09:09:25,711 - __main__ - INFO - Received ping from extension
+2026-07-31 09:10:12,865 - __main__ - INFO - Received ping from extension
+2026-07-31 09:13:39,715 - __main__ - INFO - Received ping from extension
+2026-07-31 09:14:40,955 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 09:14:40,960 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 09:16:59,778 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 09:16:59,782 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 09:16:59,782 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 09:16:59,782 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 09:16:59,783 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 09:16:59,783 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 09:17:36,719 - __main__ - INFO - Received ping from extension
+2026-07-31 09:24:19,312 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 09:24:19,331 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:24:19,334 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:24:19,335 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 09:24:19,335 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 09:24:19,611 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-07-31 09:24:19,612 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-07-31 09:24:19,612 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-07-31 09:24:19,621 - processors.reddit_processor - INFO - Processing 24 out of 24 posts with images
+2026-07-31 09:24:24,222 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:24:24,222 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism', 'blur']
+2026-07-31 09:24:24,368 - ml_models.openai_models - INFO - Using OpenAI API key: sk-proj-mBRKz-hwNo...
+2026-07-31 09:24:24,375 - ml_models.gemini_models - INFO - Initializing GeminiModel with API key: AQ.Ab8RN6Lu6y7HhIx...
+2026-07-31 09:24:32,331 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,356 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,356 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'stylize_cubism', 'selective_stylize_cubism', 'blur']
+2026-07-31 09:24:32,358 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,359 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 09:24:32,359 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_ghibli', 'stylize_pointillism', 'blur']
+2026-07-31 09:24:32,361 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,362 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:24:32,362 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:24:32,365 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-steak-w-onion-sweet-potato-fries-v0-76bg7ax0xdgh1.jpeg?width=640&crop=smart&auto=webp&s=deff0c2e4a3d3f0b055c53632e065b682795ed68: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,365 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,365 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'replacement', 'occlusion', 'stylize_impressionism', 'blur']
+2026-07-31 09:24:32,367 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tres-leches-cake-v0-iwkf4sb49fgh1.jpeg?width=640&crop=smart&auto=webp&s=9e849736f62a4b705ce6612e540c792e641eb87c: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,368 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:24:32,368 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'stylize_ghibli', 'selective_stylize_impressionism']
+2026-07-31 09:24:32,370 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,370 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:24:32,370 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'replacement', 'stylize_impressionism']
+2026-07-31 09:24:32,372 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,373 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,373 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'occlusion', 'blur']
+2026-07-31 09:24:32,374 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,376 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:24:32,376 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'occlusion', 'selective_stylize_impressionism', 'shrink', 'inpainting']
+2026-07-31 09:24:32,378 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,379 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:24:32,380 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'selective_stylize_impressionism', 'stylize_impressionism', 'occlusion', 'inpainting']
+2026-07-31 09:24:32,383 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,384 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:24:32,384 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_pointillism', 'blur', 'shrink', 'occlusion']
+2026-07-31 09:24:32,385 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,386 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:24:32,386 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'shrink']
+2026-07-31 09:24:32,387 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,388 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:24:32,388 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'blur', 'selective_stylize_pointillism', 'shrink', 'selective_stylize_cubism']
+2026-07-31 09:24:32,390 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-this-cute-donuts-v0-m7wvuhkk3hgh1.jpg?width=640&crop=smart&auto=webp&s=4716a5e75ce948b03e7abff25b38eb32be8ee429: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,391 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,391 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_cubism', 'blur']
+2026-07-31 09:24:32,392 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-jam-doughnuts-v0-5o2ctunk49gh1.jpeg?width=640&crop=smart&auto=webp&s=79427f7e0cf2d9f23d59c67be11d9de4b7520c1e: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,393 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:24:32,393 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_cubism', 'selective_stylize_cubism', 'blur']
+2026-07-31 09:24:32,395 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,396 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 09:24:32,396 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:24:32,397 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,398 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,398 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_pointillism', 'selective_stylize_pointillism', 'stylize_cubism']
+2026-07-31 09:24:32,400 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,401 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:24:32,401 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_ghibli', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_ghibli']
+2026-07-31 09:24:32,402 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,403 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.6
+2026-07-31 09:24:32,403 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'selective_stylize_ghibli', 'selective_stylize_impressionism', 'replacement']
+2026-07-31 09:24:32,405 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,406 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:24:32,406 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'stylize_impressionism', 'replacement']
+2026-07-31 09:24:32,407 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,408 - FilterUtils.FilterUtils - WARNING - No suitable filter found.
+2026-07-31 09:24:32,409 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:24:32,409 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'stylize_pointillism', 'blur']
+2026-07-31 09:24:32,411 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,414 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-07-31 09:24:32,414 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'replacement']
+2026-07-31 09:24:32,416 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,417 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:24:32,417 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'selective_stylize_impressionism', 'shrink', 'inpainting']
+2026-07-31 09:24:32,418 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-double-cheese-egg-muffins-v0-rpm3pnofwcgh1.jpeg?width=640&crop=smart&auto=webp&s=08455d399d76f14ec216b77402f908b40bad0289: closeup images of foods that trigger cravings
+2026-07-31 09:24:32,420 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-07-31 09:24:32,421 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-07-31 09:24:32,421 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-07-31 09:24:32,422 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-07-31 09:24:32,423 - processors.reddit_processor - INFO - Parallel processing completed in 12.81s (avg 0.53s per post)
+2026-07-31 09:24:32,423 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+24 posts with images.
+2026-07-31 09:40:25,155 - __main__ - INFO - Received ping from extension
+2026-07-31 09:40:27,401 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 09:40:27,420 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:40:27,423 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:40:27,424 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 09:40:27,424 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 09:40:27,685 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-07-31 09:40:27,686 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-07-31 09:40:27,686 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-07-31 09:40:27,693 - processors.reddit_processor - INFO - Processing 24 out of 24 posts with images
+2026-07-31 09:40:30,238 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:40:30,238 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'replacement', 'blur']
+2026-07-31 09:40:30,246 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,275 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:40:30,275 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'shrink', 'inpainting']
+2026-07-31 09:40:30,278 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,351 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:40:30,351 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_ghibli', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_ghibli']
+2026-07-31 09:40:30,354 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,447 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:40:30,447 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:40:30,452 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,456 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 09:40:30,456 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:40:30,459 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,460 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.6
+2026-07-31 09:40:30,460 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'blur', 'replacement', 'stylize_impressionism', 'selective_stylize_impressionism']
+2026-07-31 09:40:30,463 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,464 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:40:30,464 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'stylize_ghibli', 'selective_stylize_cubism', 'inpainting']
+2026-07-31 09:40:30,466 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,468 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 09:40:30,468 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'stylize_ghibli', 'inpainting']
+2026-07-31 09:40:30,470 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/mashed-potato-birthday-cake-homemade-v0-dfpsl15qs1gh1.jpg?width=640&crop=smart&auto=webp&s=ccdbfe00ec79578a40b5e1d9af3038562df36110: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,472 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 09:40:30,472 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'selective_stylize_impressionism', 'inpainting', 'selective_stylize_cubism']
+2026-07-31 09:40:30,474 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-double-cheese-egg-muffins-v0-rpm3pnofwcgh1.jpeg?width=640&crop=smart&auto=webp&s=08455d399d76f14ec216b77402f908b40bad0289: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,499 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:40:30,499 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'blur', 'stylize_pointillism', 'replacement']
+2026-07-31 09:40:30,501 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,553 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:40:30,553 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'stylize_impressionism', 'selective_stylize_impressionism', 'replacement']
+2026-07-31 09:40:30,555 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,561 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:40:30,561 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'replacement', 'shrink', 'selective_stylize_impressionism']
+2026-07-31 09:40:30,562 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,586 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:40:30,586 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'blur', 'stylize_pointillism', 'selective_stylize_cubism']
+2026-07-31 09:40:30,588 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tres-leches-cake-v0-iwkf4sb49fgh1.jpeg?width=640&crop=smart&auto=webp&s=9e849736f62a4b705ce6612e540c792e641eb87c: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,620 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:40:30,620 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_ghibli', 'blur', 'occlusion', 'replacement']
+2026-07-31 09:40:30,622 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,681 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-07-31 09:40:30,682 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_ghibli', 'stylize_impressionism', 'stylize_ghibli', 'selective_stylize_cubism']
+2026-07-31 09:40:30,684 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,711 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:40:30,711 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'blur', 'stylize_pointillism', 'selective_stylize_impressionism']
+2026-07-31 09:40:30,713 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,724 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:40:30,724 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_ghibli', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:40:30,726 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,784 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.6
+2026-07-31 09:40:30,784 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:40:30,786 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-sirloin-steak-scallion-pancake-taco-with-japanese-v0-mii4jz0kbggh1.jpeg?width=640&crop=smart&auto=webp&s=47b7068c40960ead18b4d6380b692bd85f573714: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,796 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:40:30,796 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_ghibli', 'blur', 'inpainting']
+2026-07-31 09:40:30,798 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,836 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:40:30,836 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_ghibli', 'stylize_impressionism', 'shrink', 'stylize_cubism']
+2026-07-31 09:40:30,838 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-taiwanese-snow-ice-and-shaved-ice-v0-s4pmjgpzcggh1.jpeg?width=640&crop=smart&auto=webp&s=03fcafa8e003c15b5701015f9202f09417da8d3b: closeup images of foods that trigger cravings
+2026-07-31 09:40:30,939 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:40:30,939 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism', 'blur']
+2026-07-31 09:40:30,943 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe: closeup images of foods that trigger cravings
+2026-07-31 09:40:31,283 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:40:31,283 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_pointillism', 'blur', 'stylize_impressionism', 'stylize_pointillism']
+2026-07-31 09:40:31,285 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69: closeup images of foods that trigger cravings
+2026-07-31 09:40:31,317 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:40:31,317 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'blur', 'inpainting', 'selective_stylize_cubism']
+2026-07-31 09:40:31,319 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0: closeup images of foods that trigger cravings
+2026-07-31 09:40:31,803 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 5.800000000000001
+2026-07-31 09:40:31,803 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'replacement', 'blur', 'selective_stylize_ghibli', 'shrink']
+2026-07-31 09:40:31,805 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78: closeup images of foods that trigger cravings
+2026-07-31 09:40:31,807 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-07-31 09:40:31,807 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-07-31 09:40:31,808 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-07-31 09:40:31,808 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-07-31 09:40:31,809 - processors.reddit_processor - INFO - Parallel processing completed in 4.12s (avg 0.17s per post)
+2026-07-31 09:40:31,809 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+24 posts with images.
+2026-07-31 09:53:37,334 - __main__ - INFO - Received ping from extension
+2026-07-31 09:53:39,665 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 09:53:39,672 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:53:39,673 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:53:39,673 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 09:53:39,674 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 09:53:39,743 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-07-31 09:53:39,744 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-07-31 09:53:39,744 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-07-31 09:53:39,752 - processors.reddit_processor - INFO - Processing 24 out of 24 posts with images
+2026-07-31 09:53:42,551 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:53:42,552 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'shrink', 'replacement']
+2026-07-31 09:53:42,559 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,564 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:53:42,564 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['occlusion', 'inpainting', 'replacement', 'blur', 'shrink']
+2026-07-31 09:53:42,569 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,578 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 09:53:42,578 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'selective_stylize_impressionism', 'inpainting', 'shrink', 'replacement']
+2026-07-31 09:53:42,581 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,590 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:53:42,590 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['warning', 'occlusion', 'selective_stylize_impressionism', 'shrink', 'inpainting']
+2026-07-31 09:53:42,592 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,620 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:53:42,620 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'blur', 'replacement', 'occlusion']
+2026-07-31 09:53:42,622 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,623 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.6
+2026-07-31 09:53:42,623 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'inpainting', 'blur']
+2026-07-31 09:53:42,625 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,627 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,627 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'replacement', 'shrink', 'selective_stylize_impressionism']
+2026-07-31 09:53:42,628 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tres-leches-cake-v0-iwkf4sb49fgh1.jpeg?width=640&crop=smart&auto=webp&s=9e849736f62a4b705ce6612e540c792e641eb87c: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,630 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:53:42,630 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'blur', 'selective_stylize_cubism', 'stylize_cubism']
+2026-07-31 09:53:42,631 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,660 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 09:53:42,660 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'blur', 'selective_stylize_impressionism', 'shrink']
+2026-07-31 09:53:42,662 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,663 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 09:53:42,663 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'blur', 'occlusion', 'replacement', 'shrink']
+2026-07-31 09:53:42,666 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,667 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:53:42,667 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:53:42,669 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-jam-doughnuts-v0-5o2ctunk49gh1.jpeg?width=640&crop=smart&auto=webp&s=79427f7e0cf2d9f23d59c67be11d9de4b7520c1e: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,670 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.6000000000000005
+2026-07-31 09:53:42,670 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_cubism', 'selective_stylize_impressionism', 'blur']
+2026-07-31 09:53:42,672 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-classic-pastrami-reuben-v0-e7699nrnyegh1.jpg?width=640&crop=smart&auto=webp&s=14680d4368cdfea92ed8cdc62dae598a8778f584: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,697 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,697 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'blur', 'selective_stylize_cubism', 'selective_stylize_impressionism']
+2026-07-31 09:53:42,699 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,710 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 5.800000000000001
+2026-07-31 09:53:42,710 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'stylize_cubism', 'blur', 'occlusion']
+2026-07-31 09:53:42,712 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,761 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,761 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'stylize_impressionism', 'selective_stylize_pointillism', 'stylize_cubism']
+2026-07-31 09:53:42,764 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,765 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:53:42,765 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_cubism', 'blur']
+2026-07-31 09:53:42,766 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-double-cheese-egg-muffins-v0-rpm3pnofwcgh1.jpeg?width=640&crop=smart&auto=webp&s=08455d399d76f14ec216b77402f908b40bad0289: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,896 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,896 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_cubism', 'stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:53:42,898 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,899 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:53:42,899 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'stylize_impressionism', 'stylize_cubism', 'blur']
+2026-07-31 09:53:42,901 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,927 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,927 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_ghibli', 'blur', 'inpainting', 'occlusion']
+2026-07-31 09:53:42,930 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,931 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.4
+2026-07-31 09:53:42,931 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'blur', 'replacement', 'occlusion']
+2026-07-31 09:53:42,933 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,936 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-07-31 09:53:42,936 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'blur', 'inpainting', 'selective_stylize_pointillism', 'stylize_ghibli']
+2026-07-31 09:53:42,937 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69: closeup images of foods that trigger cravings
+2026-07-31 09:53:42,946 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:53:42,946 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:53:42,948 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-steak-w-onion-sweet-potato-fries-v0-76bg7ax0xdgh1.jpeg?width=640&crop=smart&auto=webp&s=deff0c2e4a3d3f0b055c53632e065b682795ed68: closeup images of foods that trigger cravings
+2026-07-31 09:53:43,178 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:53:43,178 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'blur', 'replacement', 'occlusion']
+2026-07-31 09:53:43,180 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba: closeup images of foods that trigger cravings
+2026-07-31 09:53:43,182 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:53:43,182 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_ghibli', 'stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_ghibli']
+2026-07-31 09:53:43,183 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25: closeup images of foods that trigger cravings
+2026-07-31 09:53:43,185 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-07-31 09:53:43,185 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-07-31 09:53:43,186 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-07-31 09:53:43,186 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-07-31 09:53:43,187 - processors.reddit_processor - INFO - Parallel processing completed in 3.44s (avg 0.14s per post)
+2026-07-31 09:53:43,187 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+24 posts with images.
+2026-07-31 09:57:47,370 - __main__ - INFO - Received ping from extension
+2026-07-31 09:57:50,029 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 09:57:50,043 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 09:57:50,047 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 09:57:50,047 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 09:57:50,047 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 09:57:50,119 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-07-31 09:57:50,120 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-07-31 09:57:50,120 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-07-31 09:57:50,129 - processors.reddit_processor - INFO - Processing 24 out of 24 posts with images
+2026-07-31 09:57:52,500 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 09:57:52,500 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_pointillism', 'selective_stylize_impressionism', 'blur', 'shrink', 'replacement']
+2026-07-31 09:57:52,509 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-double-cheese-egg-muffins-v0-rpm3pnofwcgh1.jpeg?width=640&crop=smart&auto=webp&s=08455d399d76f14ec216b77402f908b40bad0289: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,514 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-07-31 09:57:52,515 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'occlusion', 'stylize_impressionism', 'replacement', 'stylize_cubism']
+2026-07-31 09:57:52,520 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,552 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 09:57:52,552 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'replacement', 'stylize_impressionism']
+2026-07-31 09:57:52,554 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-classic-pastrami-reuben-v0-e7699nrnyegh1.jpg?width=640&crop=smart&auto=webp&s=14680d4368cdfea92ed8cdc62dae598a8778f584: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,574 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 5.199999999999999
+2026-07-31 09:57:52,574 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_pointillism', 'blur', 'shrink', 'replacement']
+2026-07-31 09:57:52,576 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,577 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:57:52,578 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['occlusion', 'replacement', 'inpainting', 'shrink', 'stylize_impressionism']
+2026-07-31 09:57:52,579 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,598 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:52,598 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'stylize_ghibli', 'selective_stylize_impressionism']
+2026-07-31 09:57:52,601 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,602 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:57:52,602 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'blur']
+2026-07-31 09:57:52,605 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,609 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:57:52,609 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'blur']
+2026-07-31 09:57:52,611 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/mashed-potato-birthday-cake-homemade-v0-dfpsl15qs1gh1.jpg?width=640&crop=smart&auto=webp&s=ccdbfe00ec79578a40b5e1d9af3038562df36110: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,615 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 09:57:52,615 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'occlusion', 'replacement', 'inpainting', 'selective_stylize_impressionism']
+2026-07-31 09:57:52,617 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,731 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 09:57:52,731 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'stylize_impressionism', 'stylize_cubism', 'stylize_pointillism']
+2026-07-31 09:57:52,733 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,735 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:57:52,735 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'shrink', 'selective_stylize_ghibli', 'inpainting']
+2026-07-31 09:57:52,736 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,737 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-07-31 09:57:52,737 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_pointillism', 'stylize_impressionism', 'stylize_cubism', 'stylize_ghibli', 'selective_stylize_pointillism']
+2026-07-31 09:57:52,739 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,741 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-07-31 09:57:52,741 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'stylize_cubism', 'shrink', 'replacement']
+2026-07-31 09:57:52,743 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,743 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:57:52,744 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_cubism', 'stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-07-31 09:57:52,745 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tres-leches-cake-v0-iwkf4sb49fgh1.jpeg?width=640&crop=smart&auto=webp&s=9e849736f62a4b705ce6612e540c792e641eb87c: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,746 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:52,746 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_ghibli', 'stylize_pointillism', 'replacement']
+2026-07-31 09:57:52,747 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,748 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:57:52,748 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'occlusion', 'shrink']
+2026-07-31 09:57:52,750 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,750 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 09:57:52,750 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:57:52,752 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,753 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 09:57:52,753 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'stylize_ghibli', 'inpainting']
+2026-07-31 09:57:52,755 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-steak-w-onion-sweet-potato-fries-v0-76bg7ax0xdgh1.jpeg?width=640&crop=smart&auto=webp&s=deff0c2e4a3d3f0b055c53632e065b682795ed68: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,844 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:52,844 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'blur']
+2026-07-31 09:57:52,846 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25: closeup images of foods that trigger cravings
+2026-07-31 09:57:52,945 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:52,945 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'blur']
+2026-07-31 09:57:52,947 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228: closeup images of foods that trigger cravings
+2026-07-31 09:57:53,085 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 09:57:53,085 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'blur', 'replacement', 'shrink']
+2026-07-31 09:57:53,087 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe: closeup images of foods that trigger cravings
+2026-07-31 09:57:53,136 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.2
+2026-07-31 09:57:53,136 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_ghibli', 'selective_stylize_cubism', 'blur', 'replacement']
+2026-07-31 09:57:53,138 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69: closeup images of foods that trigger cravings
+2026-07-31 09:57:53,339 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:53,339 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_pointillism', 'selective_stylize_ghibli', 'blur', 'stylize_impressionism']
+2026-07-31 09:57:53,342 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-jam-doughnuts-v0-5o2ctunk49gh1.jpeg?width=640&crop=smart&auto=webp&s=79427f7e0cf2d9f23d59c67be11d9de4b7520c1e: closeup images of foods that trigger cravings
+2026-07-31 09:57:53,420 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 09:57:53,420 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 09:57:53,423 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0: closeup images of foods that trigger cravings
+2026-07-31 09:57:53,425 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-07-31 09:57:53,425 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-07-31 09:57:53,426 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-07-31 09:57:53,427 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-07-31 09:57:53,427 - processors.reddit_processor - INFO - Parallel processing completed in 3.31s (avg 0.14s per post)
+2026-07-31 09:57:53,427 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+24 posts with images.
+2026-07-31 10:02:08,249 - __main__ - INFO - Received ping from extension
+2026-07-31 10:02:10,262 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-07-31 10:02:10,269 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 10:02:10,270 - database.operations - INFO - Found 1 active filters for user 104225399876121148596
+2026-07-31 10:02:10,271 - processors.base_processor - INFO - Loaded 1 active filters
+2026-07-31 10:02:10,271 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-07-31 10:02:10,345 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-07-31 10:02:10,346 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-07-31 10:02:10,346 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-07-31 10:02:10,354 - processors.reddit_processor - INFO - Processing 24 out of 24 posts with images
+2026-07-31 10:02:13,101 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,101 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'blur', 'occlusion', 'replacement', 'shrink']
+2026-07-31 10:02:13,105 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-vietnamese-l%E1%BA%A9u-d%C3%AA-goat-hot-pot-v0-50wbmicmaggh1.jpeg?width=640&crop=smart&auto=webp&s=cf7e9d1250e74649344ba0ab0d29d69c3a4ee6c1: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,107 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,107 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'occlusion', 'stylize_cubism', 'stylize_impressionism', 'replacement']
+2026-07-31 10:02:13,109 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,184 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-07-31 10:02:13,184 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'occlusion', 'replacement']
+2026-07-31 10:02:13,188 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,268 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 10:02:13,268 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'inpainting', 'blur', 'selective_stylize_impressionism']
+2026-07-31 10:02:13,270 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,341 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,341 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['warning', 'blur', 'selective_stylize_impressionism', 'shrink', 'occlusion']
+2026-07-31 10:02:13,344 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,345 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.4
+2026-07-31 10:02:13,345 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'selective_stylize_ghibli', 'stylize_cubism', 'stylize_pointillism']
+2026-07-31 10:02:13,347 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,348 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 10:02:13,349 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_pointillism', 'selective_stylize_pointillism', 'stylize_cubism']
+2026-07-31 10:02:13,350 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,378 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 10:02:13,378 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'stylize_impressionism', 'stylize_pointillism']
+2026-07-31 10:02:13,382 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,417 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,417 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'shrink', 'stylize_pointillism', 'selective_stylize_ghibli', 'stylize_impressionism']
+2026-07-31 10:02:13,419 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,421 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 10:02:13,421 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'stylize_impressionism', 'replacement']
+2026-07-31 10:02:13,423 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,478 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 10:02:13,478 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'selective_stylize_cubism', 'stylize_cubism', 'blur']
+2026-07-31 10:02:13,481 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,485 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,485 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_cubism', 'blur', 'inpainting']
+2026-07-31 10:02:13,487 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-taiwanese-snow-ice-and-shaved-ice-v0-s4pmjgpzcggh1.jpeg?width=640&crop=smart&auto=webp&s=03fcafa8e003c15b5701015f9202f09417da8d3b: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,511 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-07-31 10:02:13,511 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'blur', 'replacement']
+2026-07-31 10:02:13,513 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,563 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-07-31 10:02:13,563 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['occlusion', 'inpainting', 'blur', 'replacement', 'shrink']
+2026-07-31 10:02:13,565 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-sirloin-steak-scallion-pancake-taco-with-japanese-v0-mii4jz0kbggh1.jpeg?width=640&crop=smart&auto=webp&s=47b7068c40960ead18b4d6380b692bd85f573714: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,570 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 10:02:13,570 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'stylize_cubism', 'occlusion', 'inpainting']
+2026-07-31 10:02:13,573 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,683 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-07-31 10:02:13,683 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'stylize_impressionism', 'shrink', 'blur']
+2026-07-31 10:02:13,685 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/pan-seared-haddock-fillet-homemade-pilaf-veg-french-v0-352ggdb8bggh1.jpeg?width=640&crop=smart&auto=webp&s=426f095092295cfbcc9522bb798733a559de31e6: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,686 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-07-31 10:02:13,686 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism', 'stylize_ghibli']
+2026-07-31 10:02:13,688 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,834 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-07-31 10:02:13,834 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'blur', 'stylize_pointillism', 'stylize_ghibli']
+2026-07-31 10:02:13,837 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf: closeup images of foods that trigger cravings
+2026-07-31 10:02:13,857 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 10:02:13,858 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism']
+2026-07-31 10:02:13,860 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,030 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-07-31 10:02:14,030 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'stylize_pointillism', 'blur', 'occlusion']
+2026-07-31 10:02:14,032 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,293 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-07-31 10:02:14,293 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_cubism', 'blur', 'occlusion', 'selective_stylize_impressionism']
+2026-07-31 10:02:14,295 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,451 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.8
+2026-07-31 10:02:14,451 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'replacement', 'occlusion', 'inpainting', 'stylize_impressionism']
+2026-07-31 10:02:14,453 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,714 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-07-31 10:02:14,714 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'blur', 'stylize_pointillism', 'selective_stylize_pointillism']
+2026-07-31 10:02:14,717 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,899 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 4.8
+2026-07-31 10:02:14,899 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'replacement', 'selective_stylize_ghibli']
+2026-07-31 10:02:14,901 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78: closeup images of foods that trigger cravings
+2026-07-31 10:02:14,903 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-07-31 10:02:14,904 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-07-31 10:02:14,905 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-07-31 10:02:14,905 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-07-31 10:02:14,906 - processors.reddit_processor - INFO - Parallel processing completed in 4.56s (avg 0.19s per post)
+2026-07-31 10:02:14,906 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+24 posts with images.
+2026-07-31 10:02:23,135 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_79a3f17d/warning.png
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:23,136 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-pb-pizza-and-a-classic-pep-v0-d4ojln8w0hgh1.jpg?width=640&crop=smart&auto=webp&s=b862c8591d83d70fe64aa144f621b709bb247e25
+2026-07-31 10:02:24,683 - __main__ - INFO - Received Redis notification for image: https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] Image URL: https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_127b6dd1/inpainting.png
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:24,683 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:24,684 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:24,684 - __main__ - INFO - [WS Notify] No users waiting for image: https://external-preview.redd.it/homemade-basted-katsu-v0-ejV2NGtiMjN4Z2doMalOQQ29hBaiNno0WWfs58YAyfdoRx5-49ijm-3OiMe1.jpeg?format=pjpg&auto=webp&s=37415ed88c09154d7486a20f7266e0342d19fd69
+2026-07-31 10:02:31,396 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4
+2026-07-31 10:02:31,396 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:31,396 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4
+2026-07-31 10:02:31,396 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_0d6d4169/blur.png
+2026-07-31 10:02:31,396 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:31,397 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:31,397 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:31,397 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:31,397 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-one-mac-and-cheese-per-person-v0-bnd9gmkeeggh1.jpg?width=640&crop=smart&auto=webp&s=4a479ed5d55d0632a2e9f2ab93302234ccb4a4d4
+2026-07-31 10:02:32,748 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_f91484e9/blur.png
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:32,748 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:32,749 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:32,749 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-made-cured-yolks-for-the-first-time-v0-ms7rxmy2kdgh1.jpg?width=640&crop=smart&auto=webp&s=136a244bc95bcc73548b6a3d33a036f3462f0bdd
+2026-07-31 10:02:35,531 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-vietnamese-l%E1%BA%A9u-d%C3%AA-goat-hot-pot-v0-50wbmicmaggh1.jpeg?width=640&crop=smart&auto=webp&s=cf7e9d1250e74649344ba0ab0d29d69c3a4ee6c1
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-vietnamese-l%E1%BA%A9u-d%C3%AA-goat-hot-pot-v0-50wbmicmaggh1.jpeg?width=640&crop=smart&auto=webp&s=cf7e9d1250e74649344ba0ab0d29d69c3a4ee6c1
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_4d856f3a/blur.png
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:35,531 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-vietnamese-l%E1%BA%A9u-d%C3%AA-goat-hot-pot-v0-50wbmicmaggh1.jpeg?width=640&crop=smart&auto=webp&s=cf7e9d1250e74649344ba0ab0d29d69c3a4ee6c1
+2026-07-31 10:02:37,338 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-sirloin-steak-scallion-pancake-taco-with-japanese-v0-mii4jz0kbggh1.jpeg?width=640&crop=smart&auto=webp&s=47b7068c40960ead18b4d6380b692bd85f573714
+2026-07-31 10:02:37,338 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-sirloin-steak-scallion-pancake-taco-with-japanese-v0-mii4jz0kbggh1.jpeg?width=640&crop=smart&auto=webp&s=47b7068c40960ead18b4d6380b692bd85f573714
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_0f1338cc/occlusion.png
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:37,339 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-sirloin-steak-scallion-pancake-taco-with-japanese-v0-mii4jz0kbggh1.jpeg?width=640&crop=smart&auto=webp&s=47b7068c40960ead18b4d6380b692bd85f573714
+2026-07-31 10:02:42,732 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c
+2026-07-31 10:02:42,732 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:42,732 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c
+2026-07-31 10:02:42,732 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_d92c12ea/inpainting.png
+2026-07-31 10:02:42,732 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:42,732 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:42,733 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:42,733 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:42,733 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-katzs-pastrami-on-rye-v0-jxdeiu9s7lfh1.jpeg?width=640&crop=smart&auto=webp&s=b25778d485cce670f921817e10ac5ea4b6a0702c
+2026-07-31 10:02:44,597 - __main__ - INFO - Received Redis notification for image: https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Image URL: https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_3ce2f32e/occlusion.png
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:44,598 - __main__ - INFO - [WS Notify] No users waiting for image: https://external-preview.redd.it/homemade-baklava-v0-NmdibjZ5MTNoZGdoMXDocbyDS3pdrjVKlE1mA4q1e0ZhVR-Y2UDpqeMiQgur.png?format=pjpg&auto=webp&s=9d6f498e31331f8569c3a9642d56c70f62f1c228
+2026-07-31 10:02:45,133 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_8d34ba8e/blur.png
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:45,133 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-hamburger-bagels-v0-hpg4jjcqsggh1.jpeg?width=640&crop=smart&auto=webp&s=00f41e4c5b2b2d558fc6e709d7dba487e62a9de3
+2026-07-31 10:02:48,011 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09
+2026-07-31 10:02:48,011 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_9a7d3b33/blur.png
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:48,012 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-tteokbokki-v0-ad5l47jeedgh1.jpeg?width=640&crop=smart&auto=webp&s=d74490b62c3704844c32104d70bdf05059e9de09
+2026-07-31 10:02:48,346 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_d2f54868/selective_stylize_impressionism.png
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:48,346 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/leftover-homemade-beef-and-onion-stir-fry-sandwich-v0-inn96s0b1egh1.jpg?width=640&crop=smart&auto=webp&s=7c43ff6143bd021fdc6daeba99c2e5ae338dfa78
+2026-07-31 10:02:49,980 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_b4747d18/selective_stylize_impressionism.png
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:49,980 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-carbonara-v0-aqxbi8ujldgh1.jpeg?width=640&crop=smart&auto=webp&s=9cd028e81dcbcf740c09dc6307b197eac756cca8
+2026-07-31 10:02:52,379 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_0d469a87/blur.png
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:52,379 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/chicken-wings-and-conecuh-sausage-homemade-v0-tzfjmqjjg6fh1.jpg?width=640&crop=smart&auto=webp&s=48e3f107793de473a39fc91c0b1a12d557524e78
+2026-07-31 10:02:53,490 - __main__ - INFO - Received Redis notification for image: https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Image URL: https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_b299ac99/blur.png
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:53,491 - __main__ - INFO - [WS Notify] No users waiting for image: https://external-preview.redd.it/chilean-sea-bass-with-lamb-and-rice-homemade-v0-YWQ2MmNsenBiZmdoMYvvpnWs5kYotsvCjQmE51geZkZXIOt7rqFlrC6tk-KL.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=21e2c00f7ae534c449aaec7d9d3a7305e9be69fe
+2026-07-31 10:02:55,578 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0
+2026-07-31 10:02:55,578 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:55,578 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0
+2026-07-31 10:02:55,578 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_4e0aa338/shrink.png
+2026-07-31 10:02:55,578 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:55,578 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:55,579 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:55,579 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:55,579 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-cast-iron-pizza-v0-fn8ahscncggh1.jpeg?width=640&crop=smart&auto=webp&s=cc0dbd447b032a8d630b405af5e6b4ce061fb6a0
+2026-07-31 10:02:56,147 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_92046020/selective_stylize_impressionism.png
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:56,147 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-seared-salmon-with-fried-baby-golds-and-asparagus-v0-8ockbsw1rggh1.jpeg?width=640&crop=smart&auto=webp&s=f3edeb612a57c926aa440629ed131ee055e380bf
+2026-07-31 10:02:57,668 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba
+2026-07-31 10:02:57,668 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:57,668 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba
+2026-07-31 10:02:57,668 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_5e994e17/selective_stylize_impressionism.png
+2026-07-31 10:02:57,668 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:57,669 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:57,669 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:57,669 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:57,669 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-reuben-fries-v0-m7d1gpt8mggh1.jpeg?width=640&crop=smart&auto=webp&s=f47a7b577ed39bbf3187f3568194ea30d1c2bcba
+2026-07-31 10:02:58,967 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_8695e92c/stylize_cubism.png
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:58,967 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-turkish-beyti-kebab-v0-78xan13wzggh1.jpeg?width=640&crop=smart&auto=webp&s=5b52bf941f3ae4bde08e59d573d9e09503ba4ff2
+2026-07-31 10:02:59,551 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_d2a0f91e/stylize_cubism.png
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:02:59,551 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:02:59,552 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-fork-tender-pork-ribeye-steak-homemade-radiatori-v0-fd67fwx5iggh1.jpeg?width=640&crop=smart&auto=webp&s=97f08fd216b0a8a7493f865acef65a51b62d6dbf
+2026-07-31 10:03:00,218 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_46ce4b6a/selective_stylize_impressionism.png
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:03:00,218 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/rice-mixed-with-quinoa-paired-with-salmon-beef-french-beans-v0-3uja8zav0hgh1.jpeg?width=640&crop=smart&auto=webp&s=8b028f75e66e9b36c5bacc1828665edb4c58df71
+2026-07-31 10:03:03,192 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-taiwanese-snow-ice-and-shaved-ice-v0-s4pmjgpzcggh1.jpeg?width=640&crop=smart&auto=webp&s=03fcafa8e003c15b5701015f9202f09417da8d3b
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-taiwanese-snow-ice-and-shaved-ice-v0-s4pmjgpzcggh1.jpeg?width=640&crop=smart&auto=webp&s=03fcafa8e003c15b5701015f9202f09417da8d3b
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_54f8ee80/stylize_cubism.png
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:03:03,193 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:03:03,194 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:03:03,194 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-taiwanese-snow-ice-and-shaved-ice-v0-s4pmjgpzcggh1.jpeg?width=640&crop=smart&auto=webp&s=03fcafa8e003c15b5701015f9202f09417da8d3b
+2026-07-31 10:03:06,088 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_15f19c11/selective_stylize_impressionism.png
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:03:06,088 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:03:06,089 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:03:06,089 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-spaghetti-carbonara-with-step-by-step-photos-and-v0-4e98ghp5pggh1.jpg?width=640&crop=smart&auto=webp&s=e5d768eac0681469ebab8936d0358c5652a56ea4
+2026-07-31 10:03:06,585 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/pan-seared-haddock-fillet-homemade-pilaf-veg-french-v0-352ggdb8bggh1.jpeg?width=640&crop=smart&auto=webp&s=426f095092295cfbcc9522bb798733a559de31e6
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/pan-seared-haddock-fillet-homemade-pilaf-veg-french-v0-352ggdb8bggh1.jpeg?width=640&crop=smart&auto=webp&s=426f095092295cfbcc9522bb798733a559de31e6
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_429a323f/selective_stylize_impressionism.png
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:03:06,585 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/pan-seared-haddock-fillet-homemade-pilaf-veg-french-v0-352ggdb8bggh1.jpeg?width=640&crop=smart&auto=webp&s=426f095092295cfbcc9522bb798733a559de31e6
+2026-07-31 10:03:56,450 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1
+2026-07-31 10:03:56,451 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-07-31 10:03:56,451 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1
+2026-07-31 10:03:56,451 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_55a4211b/selective_stylize_impressionism.png
+2026-07-31 10:03:56,452 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-07-31 10:03:56,452 - __main__ - INFO - [WS Notify] Base64 included: No
+2026-07-31 10:03:56,452 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-07-31 10:03:56,452 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-07-31 10:03:56,452 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-tomato-stewed-chicken-v0-eicvhrxd0hgh1.jpeg?width=640&crop=smart&auto=webp&s=ddbb9b68c100a301a246b889e45305b98d388ed1

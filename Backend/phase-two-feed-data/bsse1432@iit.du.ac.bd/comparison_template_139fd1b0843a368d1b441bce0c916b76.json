@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": "reddit_post_1",
+      "post_type": "text",
+      "title": "Post reddit_post_1",
+      "text_filter": null,
+      "image_filter": "none",
+      "post_url": "https://www.reddit.com/r/gastricsleeve/comments/1lwktko/",
+      "type": "url"
+    },
+    {
+      "id": "custom_text_post",
+      "post_type": "text",
+      "title": "My Custom Text Post",
+      "text_filter": "blur",
+      "image_filter": "none",
+      "body": "This is a custom post created directly in the JSON file. It can contain any text content you want to include in your feed."
+    },
+    {
+      "id": "reddit_post_2",
+      "post_type": "text",
+      "title": "Post reddit_post_2",
+      "text_filter": "overlay",
+      "image_filter": "none",
+      "post_url": "https://reddit.com/r/gastricsleeve/comments/1e3tkr4/",
+      "type": "url"
+    },
+    {
+      "id": "custom_image_post",
+      "post_type": "image",
+      "title": "Beautiful Sunset Photo",
+      "text_filter": null,
+      "image_filter": "none",
+      "body": "Check out this amazing sunset I captured yesterday!",
+      "media": [
+        "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869"
+      ]
+    },
+    {
+      "id": "custom_gallery_post",
+      "post_type": "gallery",
+      "title": "My Travel Photos Collection",
+      "text_filter": "rewrite",
+      "image_filter": "none",
+      "body": "Here are some photos from my recent trip",
+      "media": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+      ]
+    }
+  ],
+  "metadata": {
+    "session_id": "139fd1b0843a368d1b441bce0c916b76",
+    "generated_from": "winner_feed",
+    "purpose": "comparison_study",
+    "instructions": {
+      "usage": "Manually edit 'image_intervention' field to create different feeds",
+      "options": {
+        "winner": "Use the system's chosen intervention (current state)",
+        "top3_loser": "Pick from top3_losers list",
+        "beyond_top3_loser": "Pick from beyond_top3_losers list",
+        "mixed": "Mix different categories for hybrid comparison"
+      }
+    },
+    "original_session_id": "139fd1b0843a368d1b441bce0c916b76"
+  }
+}

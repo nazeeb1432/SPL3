@@ -71,9 +71,9 @@ class _StorageManager:
     def _save_locally(self, image_bytes: bytes, filename: str) -> str:
         """Saves image bytes locally and returns a file URL."""
         local_dir = "temp/uploads"
-        os.makedirs(local_dir, exist_ok=True)
         local_path = os.path.join(local_dir, filename)
-        
+        os.makedirs(os.path.dirname(local_path), exist_ok=True)
+
         with open(local_path, "wb") as f:
             f.write(image_bytes)
             

@@ -20,7 +20,7 @@ interface ProcessedFeedVersion {
 }
 
 export default function HomePage() {
-  const { currentUser, loading: userLoading } = useUser()
+  const { currentUser, loading: userLoading, setUser } = useUser()
   const [comparisonSets, setComparisonSets] = useState<ComparisonSet[]>([])
   const [selectedComparisonSetId, setSelectedComparisonSetId] = useState<string | null>(null)
   const [currentSetFeeds, setCurrentSetFeeds] = useState<{
@@ -188,8 +188,8 @@ export default function HomePage() {
   if (!currentUser && !userLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <UserLogin onUserLogin={(user) => {
-          // UserContext will handle the state update
+        <UserLogin onUserLogin={(user: UserInfo) => {
+          setUser(user)
         }} />
       </div>
     )
@@ -212,9 +212,9 @@ export default function HomePage() {
       <div className="flex-grow min-w-0">
         {/* User info bar */}
         <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-md flex justify-between items-center">
-          <UserLogin 
-            onUserLogin={(user) => {
-              // UserContext will handle the state update
+          <UserLogin
+            onUserLogin={(user: UserInfo) => {
+              setUser(user)
             }}
             currentUser={currentUser}
           />

@@ -26,3 +26,5 @@ Backend/data/*
 !Backend/data/.gitkeep
 *.pyc
 __pycache__/
+Backend/temp/*
+!Backend/temp/.gitkeep
