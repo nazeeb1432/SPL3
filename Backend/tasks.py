@@ -120,12 +120,17 @@ def process_image_batch(source_url: str, intervention_names: list, user_context:
                 filename = f"jobs/{job_id}/{intervention_name}.png"
                 processed_url = storage_manager.save(processed_image_bytes, filename)
                 logger.info(f"Concurrent Batch: Saved {intervention_name} to {processed_url}")
-                
+
+                # Locally-stored URLs (http://localhost:8001/...) get mixed-content blocked
+                # when the browser tries to load them directly on an https:// page (e.g. Reddit),
+                # so also provide an inline base64 data URL the client can use instead.
+                base64_url = f"data:image/png;base64,{base64.b64encode(processed_image_bytes).decode('utf-8')}"
+
                 return {
                     "status": "success",
                     "intervention_name": intervention_name,
                     "processed_url": processed_url,
-                    "base64_url": None,  # Deferred
+                    "base64_url": base64_url,
                     "job_id": job_id
                 }
                 
@@ -196,7 +201,7 @@ def process_image_intervention(data: str) -> dict:
         logger.info(f"Saved processed image to {processed_url}")
 
         # 4. Return Result (no caching here)
-        base64_url = None # Base64 generation is deferred
+        base64_url = f"data:image/png;base64,{base64.b64encode(processed_image_bytes).decode('utf-8')}"
         
         return {
             "status": "success",

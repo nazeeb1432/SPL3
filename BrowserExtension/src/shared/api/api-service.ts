@@ -787,7 +787,10 @@ class ApiService {
         const result = await response.json();
 
         if (result.status === "COMPLETED" && result.processed_value) {
-          return result.processed_value;
+          // Prefer base64_url over the plain URL to bypass mixed-content blocking
+          // (a locally-stored http:// image URL gets silently blocked when loaded
+          // directly into an <img> on an https:// page like Reddit).
+          return result.base64_url || result.processed_value;
         }
 
         // Calculate delay for next attempt based on configuration

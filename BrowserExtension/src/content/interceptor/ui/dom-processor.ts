@@ -109,10 +109,13 @@ export class DomProcessor {
       for (const mutation of mutations) {
         mutationCount++;
         
-        // Safety check: if we're getting too many mutations, something is wrong
-        if (mutationCount > 200) {
-          console.warn('DIY-MOD DOM Processor: Too many mutations detected, possible infinite loop. Skipping batch.');
-          return;
+        // Safety check: Reddit's own infinite-scroll reflows routinely produce large
+        // mutation batches, so stop scanning further mutations past this cap rather than
+        // discarding the whole batch (which would drop legitimate new content, e.g. images
+        // needing deferred processing, that arrived earlier in the same batch).
+        if (mutationCount > 2000) {
+          console.warn('DIY-MOD DOM Processor: Too many mutations detected in one batch, stopping further scan for this batch.');
+          break;
         }
         // For childList mutations, check added nodes
         if (mutation.type === 'childList') {
@@ -390,6 +393,12 @@ export class DomProcessor {
       const element = node as Element;
       if (element instanceof HTMLImageElement) {
         return element.hasAttribute(DIY_IMG_ATTR);
+      }
+      // A newly-added container (e.g. a whole post) won't itself be an <img>,
+      // and an image-only intervention leaves no text marker in its textContent,
+      // so also check for a marked image nested anywhere inside it.
+      if (element.querySelector(`img[${DIY_IMG_ATTR}]`)) {
+        return true;
       }
       const text = element.textContent || '';
       return hasAnyMarkers(text);
