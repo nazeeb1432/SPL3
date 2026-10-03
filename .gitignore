@@ -28,3 +28,8 @@ Backend/data/*
 __pycache__/
 Backend/temp/*
 !Backend/temp/.gitkeep
+
+*.log
+*.rdb
+Backend/debug.log
+Backend/dump.rdb
