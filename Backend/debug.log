@@ -4549,3 +4549,90 @@ ModuleNotFoundError: No module named 'CartoonImager'
 2026-08-05 18:39:43,615 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
 2026-08-05 18:39:43,616 - __main__ - ERROR - Redis subscription error: Error Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
 2026-08-05 18:39:48,163 - __main__ - INFO - DIY-MOD server shutting down
+2026-10-03 16:47:34,888 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-10-03 16:47:34,896 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-10-03 16:47:34,896 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-10-03 16:47:34,896 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-10-03 16:47:34,897 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-10-03 16:47:34,901 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-10-03 16:48:13,311 - __main__ - INFO - Redis subscription cancelled
+2026-10-03 16:48:13,313 - __main__ - INFO - DIY-MOD server shutting down
+2026-10-03 16:48:23,292 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-10-03 16:48:23,296 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-10-03 16:48:23,296 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-10-03 16:48:23,297 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-10-03 16:48:23,297 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-10-03 16:48:23,299 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-10-03 16:48:33,217 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:48:33,221 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:48:33,224 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:48:36,802 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:48:36,805 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:48:36,807 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:48:43,597 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:48:43,600 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:48:43,602 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:48:48,314 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:48:48,316 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:48:48,317 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:48:58,418 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:48:58,422 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 16:48:58,424 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-10-03 16:49:17,870 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:49:17,872 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 16:49:17,874 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-10-03 16:49:36,688 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:49:36,690 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 16:50:18,851 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:50:18,857 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 16:50:39,634 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:50:39,638 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:50:39,640 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:50:54,523 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:50:54,526 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:50:54,527 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:51:01,579 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 16:51:01,581 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 16:51:01,581 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 16:51:19,415 - __main__ - INFO - Redis subscription cancelled
+2026-10-03 16:51:19,417 - __main__ - INFO - DIY-MOD server shutting down
+2026-10-03 19:30:42,838 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-10-03 19:30:42,847 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-10-03 19:30:42,848 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-10-03 19:30:42,848 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-10-03 19:30:42,850 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-10-03 19:30:42,857 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-10-03 19:30:51,547 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:30:51,551 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:30:51,554 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:31:14,496 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:14,498 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:31:14,499 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:31:16,028 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:16,031 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:31:16,032 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:31:24,412 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:24,414 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:31:24,415 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:31:32,308 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:32,313 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 19:31:32,314 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-10-03 19:31:39,681 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:39,682 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 19:31:39,683 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-10-03 19:31:54,636 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:31:54,639 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 19:32:32,602 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:32:32,607 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-10-03 19:32:59,662 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:32:59,666 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:32:59,667 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:33:26,759 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:33:26,761 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:33:26,763 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:33:30,491 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:33:30,492 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:33:30,493 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 19:33:32,745 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 19:33:32,747 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 19:33:32,748 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
