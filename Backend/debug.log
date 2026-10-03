@@ -4123,3 +4123,429 @@ ModuleNotFoundError: No module named 'CartoonImager'
 2026-07-31 17:37:27,108 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
 2026-07-31 17:37:36,786 - __main__ - INFO - Redis subscription cancelled
 2026-07-31 17:37:36,808 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 22:16:04,024 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 22:16:04,124 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 22:16:04,125 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 22:16:04,125 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 22:16:04,126 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 22:16:04,127 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 22:16:15,389 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:16:15,393 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:16:15,395 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:16:20,610 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:16:20,614 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:16:20,616 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:16:23,457 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:16:23,460 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:16:23,461 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:16:47,962 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:16:47,965 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:16:47,966 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:16:47,969 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:16:47,970 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:16:47,970 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:17:27,479 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 22:17:27,481 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 22:20:34,351 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 22:20:34,356 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 22:20:34,357 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 22:20:34,357 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 22:20:34,358 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 22:20:34,359 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 22:20:47,017 - __main__ - INFO - Received ping from extension
+2026-07-31 22:20:53,129 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:20:53,134 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:20:53,136 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:21:12,633 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 22:21:12,634 - __main__ - INFO - DIY-MOD server shutting down
+2026-07-31 22:45:41,914 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-07-31 22:45:41,926 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-07-31 22:45:41,927 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-07-31 22:45:41,927 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-07-31 22:45:41,928 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-07-31 22:45:41,928 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-07-31 22:46:12,047 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:46:12,051 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:46:12,054 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:46:31,327 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:46:31,334 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:46:31,336 - llm.chat - INFO - Detected vague input: I have arachnophobia, spiders really freak me out, reason: gibberish
+2026-07-31 22:46:42,954 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:46:42,959 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:47:07,643 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:47:07,648 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:47:07,651 - llm.chat - INFO - Found similar existing filters: ['close-up images of insects', 'closeup images of foods that trigger cravings']
+2026-07-31 22:47:46,695 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-07-31 22:47:46,699 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-07-31 22:47:46,701 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-07-31 22:47:58,309 - __main__ - INFO - Redis subscription cancelled
+2026-07-31 22:47:58,310 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-01 11:46:58,940 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-01 11:46:58,954 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-01 11:46:58,955 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-01 11:46:58,955 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-01 11:46:58,956 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-01 11:46:58,958 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-08-01 11:47:15,590 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 11:47:15,593 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 11:47:15,595 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 11:49:14,002 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 11:49:14,005 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 11:49:14,006 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 11:49:24,328 - __main__ - INFO - Redis subscription cancelled
+2026-08-01 11:49:24,330 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-01 16:22:37,834 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-01 16:22:37,841 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-01 16:22:37,841 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-01 16:22:37,841 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-01 16:22:37,842 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-01 16:22:37,843 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-08-01 16:22:53,753 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:22:53,757 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:22:53,759 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:23:33,800 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:23:33,805 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:23:33,806 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:23:39,790 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:23:39,795 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:23:39,796 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:23:51,202 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:23:51,204 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:23:51,205 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:24:16,543 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:24:16,553 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:24:16,555 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:25:18,097 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:25:18,101 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:25:18,102 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:25:56,746 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:25:56,750 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:27:00,589 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:27:00,600 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:29:01,625 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:29:01,630 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:29:01,635 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:29:03,435 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:29:03,438 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:29:03,439 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:29:17,372 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:29:17,375 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:29:17,377 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:29:18,652 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:29:18,655 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:29:18,656 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:29:19,720 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:29:19,723 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:29:19,724 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:30:12,239 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:30:12,244 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:30:12,245 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:30:23,364 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:30:23,367 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:30:23,368 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 16:30:41,470 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:30:41,474 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:31:24,593 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:31:24,596 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 16:39:10,633 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:39:10,639 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:39:10,639 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:40:35,690 - __main__ - INFO - Redis subscription cancelled
+2026-08-01 16:40:35,695 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-01 16:42:08,181 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-01 16:42:08,188 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-01 16:42:08,188 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-01 16:42:08,188 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-01 16:42:08,189 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-01 16:42:08,190 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-08-01 16:42:24,163 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:42:24,168 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:42:24,173 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 16:42:34,148 - __main__ - INFO - Redis subscription cancelled
+2026-08-01 16:42:34,151 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-01 16:43:51,523 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-01 16:43:51,531 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-01 16:43:51,531 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-01 16:43:51,531 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-01 16:43:51,532 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-01 16:43:51,533 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-08-01 16:44:42,550 - __main__ - INFO - Received ping from extension
+2026-08-01 16:44:44,883 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-08-01 16:44:44,901 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 16:44:44,904 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 16:44:44,905 - processors.base_processor - INFO - Loaded 3 active filters
+2026-08-01 16:44:44,905 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-08-01 16:44:45,156 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 17 to 4
+2026-08-01 16:44:45,157 - processors.reddit_processor - INFO - Processing 24 posts in balanced mode
+2026-08-01 16:44:45,157 - processors.reddit_processor - INFO - Starting parallel processing of 24 posts
+2026-08-01 16:44:45,166 - processors.reddit_processor - INFO - Processing 23 out of 23 posts with images
+2026-08-01 16:44:48,521 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:48,521 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'inpainting', 'shrink', 'replacement']
+2026-08-01 16:44:48,593 - ml_models.openai_models - INFO - Using OpenAI API key: sk-proj-mBRKz-hwNo...
+2026-08-01 16:44:48,601 - ml_models.gemini_models - INFO - Initializing GeminiModel with API key: AQ.Ab8RN6Lu6y7HhIx...
+2026-08-01 16:44:56,616 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-cheddar-cheese-omelette-with-toast-v0-farnkfthxpgh1.jpeg?width=640&crop=smart&auto=webp&s=79cfad64099627c0a7bc21d1dd52dd0fa99cdf43: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,629 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-08-01 16:44:56,629 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'replacement', 'shrink']
+2026-08-01 16:44:56,631 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-wallenbergare-at-tennstopet-in-stockholm-v0-8heh8hjt9lgh1.jpeg?width=640&crop=smart&auto=webp&s=43c42f7a664f7a11844c9694658157a7e468f1c1: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,632 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-08-01 16:44:56,632 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_pointillism', 'blur', 'inpainting', 'selective_stylize_impressionism', 'shrink']
+2026-08-01 16:44:56,633 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-mutton-biriyani-chicken-chap-v0-mwu4vrw4fpgh1.jpg?width=640&crop=smart&auto=webp&s=5fe480d8b7aa81ab3f7cc5de2d5b5d279bab8125: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,634 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 7.2
+2026-08-01 16:44:56,634 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'blur', 'shrink', 'replacement']
+2026-08-01 16:44:56,636 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-baked-potatoes-bolognese-v0-4ff819ffjqgh1.jpeg?width=640&crop=smart&auto=webp&s=5128627c8134da74d3263a27e414820611eb9715: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,637 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,637 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'selective_stylize_impressionism', 'replacement', 'shrink', 'selective_stylize_cubism']
+2026-08-01 16:44:56,639 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-sub-sandwich-v0-eoy7kes7vkgh1.jpg?width=640&crop=smart&auto=webp&s=296bf9a7f83d72698f949afae1eb3a291d28aa61: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,641 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.8
+2026-08-01 16:44:56,641 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'shrink', 'blur', 'replacement', 'inpainting']
+2026-08-01 16:44:56,643 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-tried-ramen-with-half-fry-for-the-first-time-v0-xiofwksivogh1.jpeg?width=640&crop=smart&auto=webp&s=1de6b9857f1bcc25d9a4f7247a30260e9a116653: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,643 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.2
+2026-08-01 16:44:56,643 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-08-01 16:44:56,645 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/nem-nuong-vietnamese-minced-pork-skewers-homemade-v0-axuenw835ngh1.jpg?width=640&crop=smart&auto=webp&s=af6acc06ae340326b6faf3ac69c5a20ec28a6a95: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,646 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,646 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_cubism']
+2026-08-01 16:44:56,648 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-salmon-omurice-v0-q41aqbopiqgh1.jpeg?width=640&crop=smart&auto=webp&s=50e7fc0cf45df2001844ec820a1557db946a127f: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,649 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-08-01 16:44:56,649 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'shrink', 'stylize_cubism', 'occlusion']
+2026-08-01 16:44:56,652 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-shrimp-poboy-v0-4txxbdruongh1.jpeg?width=640&crop=smart&auto=webp&s=9175bcbe892202a73a1fe95fdf53eda524f2c35f: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,653 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-08-01 16:44:56,653 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_cubism', 'blur']
+2026-08-01 16:44:56,656 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/pro-chef-rasmalai-fusion-cake-v0-eqolse29gqgh1.jpeg?width=640&crop=smart&auto=webp&s=2eed4a00d3f304ae83939995fc58ff12520bac23: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,657 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.0
+2026-08-01 16:44:56,657 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'stylize_impressionism', 'selective_stylize_impressionism', 'replace', 'shrink']
+2026-08-01 16:44:56,659 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-crispy-roast-pork-soy-sauce-chicken-with-rice-v0-z7qh5pfr9qgh1.jpeg?width=640&crop=smart&auto=webp&s=56d9ca1242d54c9206c7b48911b954cbad80b8ac: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,660 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.6
+2026-08-01 16:44:56,660 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'replacement', 'shrink', 'selective_stylize_impressionism', 'blur']
+2026-08-01 16:44:56,662 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-cheese-and-pepperoni-pizzas-v0-4pewa2jialgh1.jpeg?width=640&crop=smart&auto=webp&s=ae5948b27911c46da7579ce8dbd44bcf95fe2985: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,663 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,664 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'selective_stylize_impressionism', 'selective_stylize_pointillism', 'stylize_cubism']
+2026-08-01 16:44:56,667 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-carpati-cake-for-my-newborn-niece-v0-2aqjdzcsengh1.jpg?width=640&crop=smart&auto=webp&s=fc756be72caa28fb014b91e899ffc3c105f5dfb2: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,669 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,669 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_pointillism', 'stylize_cubism', 'selective_stylize_impressionism', 'stylize_ghibli']
+2026-08-01 16:44:56,671 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/pickle-pizza-homemade-tavern-style-v0-3ishtdwm8ngh1.jpg?width=640&crop=smart&auto=webp&s=3f61a407b49bce3b872a3b3ea182739664e0fdd5: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,673 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-08-01 16:44:56,902 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['shrink', 'selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'replacement']
+2026-08-01 16:44:56,904 - processors.base_processor - INFO - Best filter for image https://external-preview.redd.it/beef-ramen-homemade-v0-bTdlYXNhN2x2bGdoMTtV3owRCrYYkk-GFvZRZUxc70g_7WaWgI-MYhv4Xmox.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=9271aa9535450966c7dfcf81e763b5c1621ed8c0: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,905 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 6.2
+2026-08-01 16:44:56,905 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'selective_stylize_cubism', 'blur', 'shrink', 'occlusion']
+2026-08-01 16:44:56,907 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-steak-sandwich-v0-as6rpzkpxogh1.jpg?width=640&crop=smart&auto=webp&s=ab8ec26c45c285ce901ce4558e67073b40ae2663: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,909 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-08-01 16:44:56,909 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'shrink', 'blur', 'replacement']
+2026-08-01 16:44:56,911 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-beef-and-guinness-stew-v0-8pkwe9ytzpgh1.jpeg?width=640&crop=smart&auto=webp&s=1343219ece08929899372e377cdc693d155c0f24: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,912 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,912 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'stylize_cubism', 'selective_stylize_impressionism', 'selective_stylize_cubism', 'shrink']
+2026-08-01 16:44:56,913 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-chicken-salad-sandwich-v0-ytp7cbzssogh1.jpeg?width=640&crop=smart&auto=webp&s=bc856bfe5e97f83a4d34b43a1063dc561b3c608b: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,914 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.6
+2026-08-01 16:44:56,914 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['stylize_impressionism', 'blur', 'selective_stylize_impressionism', 'shrink', 'stylize_pointillism']
+2026-08-01 16:44:56,916 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-mutton-biryani-v0-g6bjestl9jgh1.png?width=640&crop=smart&auto=webp&s=c3ffbc14d3b24c619980abb6b86dc1d9bfaf1d6a: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,917 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,917 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'stylize_impressionism', 'stylize_cubism', 'stylize_pointillism', 'stylize_ghibli']
+2026-08-01 16:44:56,918 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-cake-four-flavor-cake-v0-9080x5gjfqgh1.jpeg?width=640&crop=smart&auto=webp&s=7acf09024527d6ed83414ae9a511af191682d2ab: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,922 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.8
+2026-08-01 16:44:56,922 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['shrink', 'selective_stylize_impressionism', 'stylize_pointillism', 'blur', 'replacement']
+2026-08-01 16:44:56,925 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-poutine-v0-1ec848fscpfh1.jpeg?width=640&crop=smart&auto=webp&s=9facced8d42d6c7bbb6ecb214f5b3e2a0c7952f3: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,926 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 8.0
+2026-08-01 16:44:56,926 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['selective_stylize_impressionism', 'shrink', 'replacement', 'stylize_impressionism', 'stylize_cubism']
+2026-08-01 16:44:56,928 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/homemade-salmon-ponzu-v0-3feohjpzc9gh1.jpeg?width=640&crop=smart&auto=webp&s=7bce608a5cbde48c66098dac518d86daf9c24e65: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,929 - FilterUtils.FilterUtils - INFO - Best filter selected: closeup images of foods that trigger cravings with score 9.2
+2026-08-01 16:44:56,929 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'replacement', 'shrink']
+2026-08-01 16:44:56,931 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/i-ate-burger-with-nice-chips-on-the-side-v0-70zk71dzjqgh1.jpeg?width=640&crop=smart&auto=webp&s=d77a239b8f3cdc99be18e94b8236d058ceb37d46: closeup images of foods that trigger cravings
+2026-08-01 16:44:56,934 - processors.reddit_processor - INFO - Processed 5/24 posts
+2026-08-01 16:44:56,935 - processors.reddit_processor - INFO - Processed 10/24 posts
+2026-08-01 16:44:56,936 - processors.reddit_processor - INFO - Processed 15/24 posts
+2026-08-01 16:44:56,936 - processors.reddit_processor - INFO - Processed 20/24 posts
+2026-08-01 16:44:56,937 - processors.reddit_processor - INFO - Parallel processing completed in 11.78s (avg 0.49s per post)
+2026-08-01 16:44:56,937 - processors.reddit_processor - INFO - Successfully processed 24/24 posts
+23 posts with images.
+2026-08-01 16:45:08,884 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-cheese-and-pepperoni-pizzas-v0-4pewa2jialgh1.jpeg?width=640&crop=smart&auto=webp&s=ae5948b27911c46da7579ce8dbd44bcf95fe2985
+2026-08-01 16:45:08,884 - __main__ - INFO - Notification includes base64 data (length: 110102 chars)
+2026-08-01 16:45:08,884 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:08,884 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-cheese-and-pepperoni-pizzas-v0-4pewa2jialgh1.jpeg?width=640&crop=smart&auto=webp&s=ae5948b27911c46da7579ce8dbd44bcf95fe2985
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_3c6bc580/inpainting.png
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 110102 chars)
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:08,885 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-cheese-and-pepperoni-pizzas-v0-4pewa2jialgh1.jpeg?width=640&crop=smart&auto=webp&s=ae5948b27911c46da7579ce8dbd44bcf95fe2985
+2026-08-01 16:45:10,435 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-cheddar-cheese-omelette-with-toast-v0-farnkfthxpgh1.jpeg?width=640&crop=smart&auto=webp&s=79cfad64099627c0a7bc21d1dd52dd0fa99cdf43
+2026-08-01 16:45:10,435 - __main__ - INFO - Notification includes base64 data (length: 55770 chars)
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-cheddar-cheese-omelette-with-toast-v0-farnkfthxpgh1.jpeg?width=640&crop=smart&auto=webp&s=79cfad64099627c0a7bc21d1dd52dd0fa99cdf43
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_042fa2c6/blur.png
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 55770 chars)
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:10,435 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-cheddar-cheese-omelette-with-toast-v0-farnkfthxpgh1.jpeg?width=640&crop=smart&auto=webp&s=79cfad64099627c0a7bc21d1dd52dd0fa99cdf43
+2026-08-01 16:45:11,425 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-poutine-v0-1ec848fscpfh1.jpeg?width=640&crop=smart&auto=webp&s=9facced8d42d6c7bbb6ecb214f5b3e2a0c7952f3
+2026-08-01 16:45:11,425 - __main__ - INFO - Notification includes base64 data (length: 104282 chars)
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-poutine-v0-1ec848fscpfh1.jpeg?width=640&crop=smart&auto=webp&s=9facced8d42d6c7bbb6ecb214f5b3e2a0c7952f3
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_a90eddc1/shrink.png
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 104282 chars)
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:11,425 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-poutine-v0-1ec848fscpfh1.jpeg?width=640&crop=smart&auto=webp&s=9facced8d42d6c7bbb6ecb214f5b3e2a0c7952f3
+2026-08-01 16:45:13,288 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-beef-and-guinness-stew-v0-8pkwe9ytzpgh1.jpeg?width=640&crop=smart&auto=webp&s=1343219ece08929899372e377cdc693d155c0f24
+2026-08-01 16:45:13,288 - __main__ - INFO - Notification includes base64 data (length: 60794 chars)
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-beef-and-guinness-stew-v0-8pkwe9ytzpgh1.jpeg?width=640&crop=smart&auto=webp&s=1343219ece08929899372e377cdc693d155c0f24
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_2071f913/shrink.png
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 60794 chars)
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:13,288 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-beef-and-guinness-stew-v0-8pkwe9ytzpgh1.jpeg?width=640&crop=smart&auto=webp&s=1343219ece08929899372e377cdc693d155c0f24
+2026-08-01 16:45:13,691 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-crispy-roast-pork-soy-sauce-chicken-with-rice-v0-z7qh5pfr9qgh1.jpeg?width=640&crop=smart&auto=webp&s=56d9ca1242d54c9206c7b48911b954cbad80b8ac
+2026-08-01 16:45:13,691 - __main__ - INFO - Notification includes base64 data (length: 121934 chars)
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-crispy-roast-pork-soy-sauce-chicken-with-rice-v0-z7qh5pfr9qgh1.jpeg?width=640&crop=smart&auto=webp&s=56d9ca1242d54c9206c7b48911b954cbad80b8ac
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_b3e8a7fc/blur.png
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 121934 chars)
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:13,691 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-crispy-roast-pork-soy-sauce-chicken-with-rice-v0-z7qh5pfr9qgh1.jpeg?width=640&crop=smart&auto=webp&s=56d9ca1242d54c9206c7b48911b954cbad80b8ac
+2026-08-01 16:45:13,738 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-baked-potatoes-bolognese-v0-4ff819ffjqgh1.jpeg?width=640&crop=smart&auto=webp&s=5128627c8134da74d3263a27e414820611eb9715
+2026-08-01 16:45:13,738 - __main__ - INFO - Notification includes base64 data (length: 121590 chars)
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-baked-potatoes-bolognese-v0-4ff819ffjqgh1.jpeg?width=640&crop=smart&auto=webp&s=5128627c8134da74d3263a27e414820611eb9715
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_dcce8cce/blur.png
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 121590 chars)
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:13,738 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:13,739 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-baked-potatoes-bolognese-v0-4ff819ffjqgh1.jpeg?width=640&crop=smart&auto=webp&s=5128627c8134da74d3263a27e414820611eb9715
+2026-08-01 16:45:13,966 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-mutton-biryani-v0-g6bjestl9jgh1.png?width=640&crop=smart&auto=webp&s=c3ffbc14d3b24c619980abb6b86dc1d9bfaf1d6a
+2026-08-01 16:45:13,966 - __main__ - INFO - Notification includes base64 data (length: 449138 chars)
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-mutton-biryani-v0-g6bjestl9jgh1.png?width=640&crop=smart&auto=webp&s=c3ffbc14d3b24c619980abb6b86dc1d9bfaf1d6a
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_2397e55b/blur.png
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 449138 chars)
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:13,966 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-mutton-biryani-v0-g6bjestl9jgh1.png?width=640&crop=smart&auto=webp&s=c3ffbc14d3b24c619980abb6b86dc1d9bfaf1d6a
+2026-08-01 16:45:14,466 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-shrimp-poboy-v0-4txxbdruongh1.jpeg?width=640&crop=smart&auto=webp&s=9175bcbe892202a73a1fe95fdf53eda524f2c35f
+2026-08-01 16:45:14,466 - __main__ - INFO - Notification includes base64 data (length: 190726 chars)
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-shrimp-poboy-v0-4txxbdruongh1.jpeg?width=640&crop=smart&auto=webp&s=9175bcbe892202a73a1fe95fdf53eda524f2c35f
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_4c2c73a4/blur.png
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 190726 chars)
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:14,466 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-shrimp-poboy-v0-4txxbdruongh1.jpeg?width=640&crop=smart&auto=webp&s=9175bcbe892202a73a1fe95fdf53eda524f2c35f
+2026-08-01 16:45:14,574 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-mutton-biriyani-chicken-chap-v0-mwu4vrw4fpgh1.jpg?width=640&crop=smart&auto=webp&s=5fe480d8b7aa81ab3f7cc5de2d5b5d279bab8125
+2026-08-01 16:45:14,574 - __main__ - INFO - Notification includes base64 data (length: 145214 chars)
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-mutton-biriyani-chicken-chap-v0-mwu4vrw4fpgh1.jpg?width=640&crop=smart&auto=webp&s=5fe480d8b7aa81ab3f7cc5de2d5b5d279bab8125
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_bc38686d/blur.png
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 145214 chars)
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:14,574 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-mutton-biriyani-chicken-chap-v0-mwu4vrw4fpgh1.jpg?width=640&crop=smart&auto=webp&s=5fe480d8b7aa81ab3f7cc5de2d5b5d279bab8125
+2026-08-01 16:45:15,594 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-salmon-ponzu-v0-3feohjpzc9gh1.jpeg?width=640&crop=smart&auto=webp&s=7bce608a5cbde48c66098dac518d86daf9c24e65
+2026-08-01 16:45:15,594 - __main__ - INFO - Notification includes base64 data (length: 146814 chars)
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-salmon-ponzu-v0-3feohjpzc9gh1.jpeg?width=640&crop=smart&auto=webp&s=7bce608a5cbde48c66098dac518d86daf9c24e65
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_18e86571/shrink.png
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 146814 chars)
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:15,594 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-salmon-ponzu-v0-3feohjpzc9gh1.jpeg?width=640&crop=smart&auto=webp&s=7bce608a5cbde48c66098dac518d86daf9c24e65
+2026-08-01 16:45:15,609 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-tried-ramen-with-half-fry-for-the-first-time-v0-xiofwksivogh1.jpeg?width=640&crop=smart&auto=webp&s=1de6b9857f1bcc25d9a4f7247a30260e9a116653
+2026-08-01 16:45:15,609 - __main__ - INFO - Notification includes base64 data (length: 100902 chars)
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-tried-ramen-with-half-fry-for-the-first-time-v0-xiofwksivogh1.jpeg?width=640&crop=smart&auto=webp&s=1de6b9857f1bcc25d9a4f7247a30260e9a116653
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_a0b0732d/shrink.png
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 100902 chars)
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:15,609 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-tried-ramen-with-half-fry-for-the-first-time-v0-xiofwksivogh1.jpeg?width=640&crop=smart&auto=webp&s=1de6b9857f1bcc25d9a4f7247a30260e9a116653
+2026-08-01 16:45:16,437 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/homemade-steak-sandwich-v0-as6rpzkpxogh1.jpg?width=640&crop=smart&auto=webp&s=ab8ec26c45c285ce901ce4558e67073b40ae2663
+2026-08-01 16:45:16,437 - __main__ - INFO - Notification includes base64 data (length: 179730 chars)
+2026-08-01 16:45:16,437 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/homemade-steak-sandwich-v0-as6rpzkpxogh1.jpg?width=640&crop=smart&auto=webp&s=ab8ec26c45c285ce901ce4558e67073b40ae2663
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_45b45364/blur.png
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 179730 chars)
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:16,438 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/homemade-steak-sandwich-v0-as6rpzkpxogh1.jpg?width=640&crop=smart&auto=webp&s=ab8ec26c45c285ce901ce4558e67073b40ae2663
+2026-08-01 16:45:16,552 - __main__ - INFO - Received Redis notification for image: https://external-preview.redd.it/beef-ramen-homemade-v0-bTdlYXNhN2x2bGdoMTtV3owRCrYYkk-GFvZRZUxc70g_7WaWgI-MYhv4Xmox.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=9271aa9535450966c7dfcf81e763b5c1621ed8c0
+2026-08-01 16:45:16,552 - __main__ - INFO - Notification includes base64 data (length: 186162 chars)
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Image URL: https://external-preview.redd.it/beef-ramen-homemade-v0-bTdlYXNhN2x2bGdoMTtV3owRCrYYkk-GFvZRZUxc70g_7WaWgI-MYhv4Xmox.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=9271aa9535450966c7dfcf81e763b5c1621ed8c0
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_978900e5/shrink.png
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 186162 chars)
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:16,552 - __main__ - INFO - [WS Notify] No users waiting for image: https://external-preview.redd.it/beef-ramen-homemade-v0-bTdlYXNhN2x2bGdoMTtV3owRCrYYkk-GFvZRZUxc70g_7WaWgI-MYhv4Xmox.jpeg?width=640&crop=smart&format=pjpg&auto=webp&s=9271aa9535450966c7dfcf81e763b5c1621ed8c0
+2026-08-01 16:45:17,348 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/i-ate-burger-with-nice-chips-on-the-side-v0-70zk71dzjqgh1.jpeg?width=640&crop=smart&auto=webp&s=d77a239b8f3cdc99be18e94b8236d058ceb37d46
+2026-08-01 16:45:17,348 - __main__ - INFO - Notification includes base64 data (length: 96306 chars)
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/i-ate-burger-with-nice-chips-on-the-side-v0-70zk71dzjqgh1.jpeg?width=640&crop=smart&auto=webp&s=d77a239b8f3cdc99be18e94b8236d058ceb37d46
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_3b4f4fd9/occlusion.png
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Filters: ['closeup images of foods that trigger cravings']
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 96306 chars)
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-08-01 16:45:17,349 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/i-ate-burger-with-nice-chips-on-the-side-v0-70zk71dzjqgh1.jpeg?width=640&crop=smart&auto=webp&s=d77a239b8f3cdc99be18e94b8236d058ceb37d46
+2026-08-01 16:47:17,015 - __main__ - INFO - Redis subscription cancelled
+2026-08-01 16:47:17,017 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-01 21:05:41,345 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-01 21:05:41,358 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-01 21:05:41,358 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-01 21:05:41,358 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-01 21:05:41,359 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-01 21:05:41,369 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-08-01 21:05:51,980 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:05:51,986 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:05:51,988 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:06:15,298 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:06:15,302 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:07:04,945 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:07:04,951 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:07:15,138 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:07:15,142 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:07:15,144 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:08:48,859 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:08:48,865 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:08:48,867 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:08:53,442 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:08:53,444 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:08:53,445 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:09:01,870 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:09:01,875 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 21:09:01,877 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 21:09:20,373 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:09:20,377 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 21:09:20,382 - __main__ - INFO - Loaded 2 filters for user 104225399876121148596
+2026-08-01 21:09:39,915 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:09:39,917 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 21:09:58,435 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:09:58,441 - database.operations - INFO - Found 2 active filters for user 104225399876121148596
+2026-08-01 21:11:03,385 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:11:03,389 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:11:03,390 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:11:24,435 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:11:24,438 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:11:24,439 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:11:30,179 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-08-01 21:11:30,182 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-08-01 21:11:30,184 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-08-01 21:11:36,904 - __main__ - INFO - Redis subscription cancelled
+2026-08-01 21:11:36,905 - __main__ - INFO - DIY-MOD server shutting down
+2026-08-05 18:39:43,608 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-08-05 18:39:43,615 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-08-05 18:39:43,615 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-08-05 18:39:43,615 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-08-05 18:39:43,615 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-08-05 18:39:43,616 - __main__ - ERROR - Redis subscription error: Error Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
+2026-08-05 18:39:48,163 - __main__ - INFO - DIY-MOD server shutting down
