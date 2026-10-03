@@ -87,6 +87,7 @@ class CreateFilterRequest(BaseModel):
     user_id: str
     filter_text: str
     intensity: int
+    content_type: str = "all"
     duration: str = "permanent"
     filter_metadata: Dict[str, Any] = {}
     is_temporary: Optional[bool] = None
@@ -97,6 +98,7 @@ class UpdateFilterRequest(BaseModel):
     user_id: str
     filter_text: str
     intensity: int
+    content_type: str = "all"
     filter_metadata: Dict[str, Any] = {}
 
 class ChatRequest(BaseModel):

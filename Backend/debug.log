@@ -4549,3 +4549,116 @@ ModuleNotFoundError: No module named 'CartoonImager'
 2026-08-05 18:39:43,615 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
 2026-08-05 18:39:43,616 - __main__ - ERROR - Redis subscription error: Error Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379) connecting to localhost:6379.
 2026-08-05 18:39:48,163 - __main__ - INFO - DIY-MOD server shutting down
+2026-10-03 20:07:46,303 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-10-03 20:07:46,308 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-10-03 20:07:46,308 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-10-03 20:07:46,308 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-10-03 20:07:46,309 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-10-03 20:07:46,311 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-10-03 20:08:11,935 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:08:11,940 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:08:11,941 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 20:08:15,731 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:08:15,737 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:08:15,738 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 20:08:29,395 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:08:29,398 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:08:29,398 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 20:08:30,676 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:08:30,678 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:08:30,679 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 20:08:41,100 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:08:41,102 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:08:41,103 - __main__ - INFO - Loaded 3 filters for user 104225399876121148596
+2026-10-03 20:09:01,344 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:09:01,348 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:09:29,854 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:09:29,857 - database.operations - INFO - Found 3 active filters for user 104225399876121148596
+2026-10-03 20:09:44,538 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:09:44,541 - database.operations - INFO - Found 4 active filters for user 104225399876121148596
+2026-10-03 20:09:44,542 - __main__ - INFO - Loaded 4 filters for user 104225399876121148596
+2026-10-03 20:10:28,987 - __main__ - INFO - Redis subscription cancelled
+2026-10-03 20:10:28,989 - __main__ - INFO - DIY-MOD server shutting down
+2026-10-03 20:21:51,543 - llm.chat - INFO - Initialized FilterCreationChat with model gpt-4o
+2026-10-03 20:21:51,547 - llm.vision - INFO - Initialized VisionFilterCreator using gpt-4o
+2026-10-03 20:21:51,548 - __main__ - INFO - Redis subscription started for image processing notifications
+2026-10-03 20:21:51,548 - __main__ - INFO - DIY-MOD server initialized successfully
+2026-10-03 20:21:51,549 - hypercorn.error - INFO - Running on http://0.0.0.0:8001 (CTRL + C to quit)
+2026-10-03 20:21:51,551 - __main__ - INFO - Subscribed to Redis channel: image_processing_complete
+2026-10-03 20:22:10,502 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:22:10,506 - database.operations - INFO - Found 4 active filters for user 104225399876121148596
+2026-10-03 20:22:10,507 - __main__ - INFO - Loaded 4 filters for user 104225399876121148596
+2026-10-03 20:22:14,647 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:22:14,650 - database.operations - INFO - Found 4 active filters for user 104225399876121148596
+2026-10-03 20:22:14,652 - __main__ - INFO - Loaded 4 filters for user 104225399876121148596
+2026-10-03 20:22:20,881 - __main__ - INFO - Received ping from extension
+2026-10-03 20:22:52,799 - llm.processor - INFO - Initialized LLMProcessor in balanced mode using gpt-4o-mini
+2026-10-03 20:22:52,806 - database.operations - INFO - Found existing user 104225399876121148596 (created: 2026-07-30 18:32:20, last active: now())
+2026-10-03 20:22:52,807 - database.operations - INFO - Found 4 active filters for user 104225399876121148596
+2026-10-03 20:22:52,808 - processors.base_processor - INFO - Loaded 4 active filters
+2026-10-03 20:22:52,808 - processors.base_processor - INFO - Initialized RedditProcessor for user 104225399876121148596 in balanced mode
+2026-10-03 20:22:52,844 - processors.reddit_processor - INFO - Shifted more-posts-cursor from post index 18 to 5
+2026-10-03 20:22:52,844 - processors.reddit_processor - INFO - Processing 25 posts in balanced mode
+2026-10-03 20:22:52,844 - processors.reddit_processor - INFO - Starting parallel processing of 25 posts
+2026-10-03 20:22:52,849 - processors.reddit_processor - INFO - Processing 2 out of 2 posts with images
+2026-10-03 20:22:58,745 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,005 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,137 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,176 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,377 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,708 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,715 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,735 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,782 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,919 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:22:59,970 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,187 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,192 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,262 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,405 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,417 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,509 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,717 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:00,753 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:01,161 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:01,171 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:01,180 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:01,602 - llm.processor - INFO - Best intervention selected: ID 2 ('Add Warning') with score 11.00
+2026-10-03 20:23:02,067 - FilterUtils.FilterUtils - INFO - Best filter selected: pregnancy related texts with score 6.2
+2026-10-03 20:23:02,067 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['inpainting', 'replacement', 'selective_stylize_impressionism', 'warning', 'stylize_impressionism']
+2026-10-03 20:23:02,138 - ml_models.openai_models - INFO - Using OpenAI API key: sk-proj-v503qXp1b4...
+2026-10-03 20:23:02,145 - ml_models.gemini_models - INFO - Initializing GeminiModel with API key: AQ.Ab8RN6Lu6y7HhIx...
+2026-10-03 20:23:12,212 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/babylist-hello-baby-box-worth-it-v0-yhgraa7al6th1.jpg?width=640&crop=smart&auto=webp&s=f005df17beac9ed86421c1a15b1c3dc6cee25f59: pregnancy related texts
+2026-10-03 20:23:13,683 - FilterUtils.FilterUtils - INFO - Best filter selected: pregnancy related texts with score 8.8
+2026-10-03 20:23:13,684 - FilterUtils.FilterUtils - INFO - Recommended interventions: ['blur', 'inpainting', 'occlusion', 'warning', 'replacement']
+2026-10-03 20:23:13,693 - processors.base_processor - INFO - Best filter for image https://preview.redd.it/uk-government-changing-laws-on-post-miscarriage-grief-from-v0-60peyu34e2rh1.jpeg?width=640&crop=smart&auto=webp&s=a97c0b13d16f19136d2bbf1ed5521a9e44c7a3cf: pregnancy related texts
+2026-10-03 20:23:13,700 - processors.reddit_processor - INFO - Processed 5/25 posts
+2026-10-03 20:23:13,702 - processors.reddit_processor - INFO - Processed 10/25 posts
+2026-10-03 20:23:13,703 - processors.reddit_processor - INFO - Processed 15/25 posts
+2026-10-03 20:23:13,705 - processors.reddit_processor - INFO - Processed 20/25 posts
+2026-10-03 20:23:13,706 - processors.reddit_processor - INFO - Processed 25/25 posts
+2026-10-03 20:23:13,707 - processors.reddit_processor - INFO - Parallel processing completed in 20.86s (avg 0.83s per post)
+2026-10-03 20:23:13,707 - processors.reddit_processor - INFO - Successfully processed 25/25 posts
+2 posts with images.
+2026-10-03 20:23:20,133 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/uk-government-changing-laws-on-post-miscarriage-grief-from-v0-60peyu34e2rh1.jpeg?width=640&crop=smart&auto=webp&s=a97c0b13d16f19136d2bbf1ed5521a9e44c7a3cf
+2026-10-03 20:23:20,135 - __main__ - INFO - Notification includes base64 data (length: 91714 chars)
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/uk-government-changing-laws-on-post-miscarriage-grief-from-v0-60peyu34e2rh1.jpeg?width=640&crop=smart&auto=webp&s=a97c0b13d16f19136d2bbf1ed5521a9e44c7a3cf
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_e135f1cf/blur.png
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Filters: ['pregnancy related texts']
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 91714 chars)
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-10-03 20:23:20,135 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-10-03 20:23:20,136 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/uk-government-changing-laws-on-post-miscarriage-grief-from-v0-60peyu34e2rh1.jpeg?width=640&crop=smart&auto=webp&s=a97c0b13d16f19136d2bbf1ed5521a9e44c7a3cf
+2026-10-03 20:23:20,342 - __main__ - INFO - Received Redis notification for image: https://preview.redd.it/babylist-hello-baby-box-worth-it-v0-yhgraa7al6th1.jpg?width=640&crop=smart&auto=webp&s=f005df17beac9ed86421c1a15b1c3dc6cee25f59
+2026-10-03 20:23:20,342 - __main__ - INFO - Notification includes base64 data (length: 101394 chars)
+2026-10-03 20:23:20,342 - __main__ - INFO - [WS Notify] 🔔 NOTIFICATION TRIGGERED
+2026-10-03 20:23:20,342 - __main__ - INFO - [WS Notify] Image URL: https://preview.redd.it/babylist-hello-baby-box-worth-it-v0-yhgraa7al6th1.jpg?width=640&crop=smart&auto=webp&s=f005df17beac9ed86421c1a15b1c3dc6cee25f59
+2026-10-03 20:23:20,342 - __main__ - INFO - [WS Notify] Result URL: http://localhost:8001/temp/uploads/jobs/104225399876121148596_97d170e1_40bcae66/inpainting.png
+2026-10-03 20:23:20,343 - __main__ - INFO - [WS Notify] Filters: ['pregnancy related texts']
+2026-10-03 20:23:20,343 - __main__ - INFO - [WS Notify] Base64 included: Yes (length: 101394 chars)
+2026-10-03 20:23:20,343 - __main__ - INFO - [WS Notify] Active WebSocket connections: []
+2026-10-03 20:23:20,343 - __main__ - INFO - [WS Notify] Waiting images map: {}
+2026-10-03 20:23:20,343 - __main__ - INFO - [WS Notify] No users waiting for image: https://preview.redd.it/babylist-hello-baby-box-worth-it-v0-yhgraa7al6th1.jpg?width=640&crop=smart&auto=webp&s=f005df17beac9ed86421c1a15b1c3dc6cee25f59
+2026-10-03 20:24:22,229 - __main__ - INFO - Redis subscription cancelled
+2026-10-03 20:24:22,231 - __main__ - INFO - DIY-MOD server shutting down
