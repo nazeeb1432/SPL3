@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./**/.env)",
+      "Read(./**/venv/**/*)",
+      "Read(./**/node_modules/**/*)",
+      "Read(./**/dist/**/*)",
+      "Read(./**/__pycache__/**/*)",
+      "Read(./**/logs/**/*)",
+      "Read(./**/temp/**/*)",
+      "Read(./**/*.log)",
+      "Read(./**/*.db)"
+    ]
+  }
+}
