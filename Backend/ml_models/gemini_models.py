@@ -30,8 +30,12 @@ class GeminiModel(ImageModel):
         api_key = api_key
         if not api_key:
             raise ValueError("GOOGLE_API_KEY environment variable not set.")
-        
+
         self.client = genai.Client(api_key=api_key)
+
+        self.text_model = os.getenv("GEMINI_TEXT_MODEL", "gemini-3.8-flash")
+        self.image_model = os.getenv("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image")
+        logger.info(f"GeminiModel resolved models: text_model={self.text_model}, image_model={self.image_model}")
 
     def describe_image(self, image_url: str, model_name: str = "gemini-pro-vision") -> str:
         """
@@ -56,12 +60,13 @@ class GeminiModel(ImageModel):
         # The actual API call might be different.
         raise NotImplementedError("Gemini image generation from prompt is not implemented in this example.")
 
-    def edit_image(self, image_bytes: bytes, prompt: str, model_name: str = "gemini-2.5-flash-image") -> bytes:
+    def edit_image(self, image_bytes: bytes, prompt: str, model_name: str = None) -> bytes:
         """
         Edits an existing image based on a textual prompt using Gemini.
         """
+        model_name = model_name or self.image_model
         image = PILImage.open(BytesIO(image_bytes))
-        
+
         response = self.client.models.generate_content(
             model=model_name,
             contents=[prompt, image],
@@ -80,10 +85,11 @@ class GeminiModel(ImageModel):
         
         raise ValueError("No image data was returned from the Gemini API.")
 
-    def score_image(self, system_prompt: str, user_prompt: str, original_image_url: str, candidate_image_url: str, model_name: str = "gemini-2.5-flash") -> str:
+    def score_image(self, system_prompt: str, user_prompt: str, original_image_url: str, candidate_image_url: str, model_name: str = None) -> str:
         """
         Uses Gemini to analyze two images and return a structured JSON string with a score.
         """
+        model_name = model_name or self.text_model
         # Download image content
         original_image = PILImage.open(requests.get(original_image_url, stream=True).raw)
         candidate_image = PILImage.open(requests.get(candidate_image_url, stream=True).raw)
@@ -101,12 +107,13 @@ class GeminiModel(ImageModel):
         
         return response.text
 
-    def detect_objects(self, image_bytes: bytes, filter_text: str, filter_metadata: Dict[str,Any], model_name: str = "gemini-2.5-flash") -> dict:
+    def detect_objects(self, image_bytes: bytes, filter_text: str, filter_metadata: Dict[str,Any], model_name: str = None) -> dict:
         """
         Detect objects in an image and return their bounding box coordinates.
         Returns a dictionary with detected objects and their normalized coordinates.
         """
         import json
+        model_name = model_name or self.text_model
         image = PILImage.open(BytesIO(image_bytes))
         
         # Get image dimensions for coordinate normalization
