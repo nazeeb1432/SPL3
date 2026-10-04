@@ -19,7 +19,8 @@ class ImageCacheManager():
         # self.llm = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         # self.model = "gpt-4o-mini"
         self.llm = OpenAI(api_key=os.getenv("GOOGLE_API_KEY"), base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
-        self.model = "gemini-2.5-flash"
+        self.model = os.getenv("GEMINI_TEXT_MODEL", "gemini-3.8-flash")
+        logger.info(f"ImageCacheManager resolved model: {self.model}")
         self.websocket_callback = None  # Will be set by app.py
 
     def _get_filter_string(self, filters):
