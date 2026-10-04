@@ -33,3 +33,4 @@ Backend/temp/*
 *.rdb
 Backend/debug.log
 Backend/dump.rdb
+Backend/filters.db
