@@ -1,88 +1,114 @@
-# DIY-MOD: Personalized Content Moderation System
+# SHIELD: DIY Content Transformation for Safer Social Media Browsing
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Node.js](https://img.shields.io/badge/node-16+-green.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+Final project for SE-801: Software Project Lab 3, Institute of Information Technology, University of Dhaka.
 
-Copyright © 2026 The Regents of the University of Michigan
-Social Computing Lab
-
-This repository contains the official implementation for the paper:
-
-> **What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation**  
-> *Rayhan Rashed and Farnaz Jahanbakhsh*  
-> 📄 [Read the Paper](https://arxiv.org/abs/2509.22861) | 🌐 [Project Website](https://rayhan.io/diymod/)
+**Author:** Nazeeb Ahmed Chowdhury (BSSE1432)  
+**Supervisor:** Toukir Ahammed, Lecturer, IIT, University of Dhaka
 
 ## Overview
 
-**DIY-MOD** is an end-to-end system that enables users to personalize their online content experience without platform-side censorship. Instead of simply blocking unwanted content, DIY-MOD transforms it.
+Social media platforms moderate content with one set of rules for everyone, but what distresses a person is individual. A food photo is harmless to most people and a trigger for someone with an eating disorder. The tools platforms offer in response (muting keywords, blocking accounts) remove whole posts or whole people, so the user has to choose between seeing the distressing content and losing the conversation around it.
 
-## System Architecture
+SHIELD takes a different approach: it **transforms** content instead of removing it. You describe what you do not want to see in your own words, and SHIELD changes only that part of a post while leaving the rest intact.
 
-The system consists of two primary components:
+**What it does**
 
-1.  **Core DIY-MOD System**:
-    *   **Backend**: A Python/FastAPI server that handles content processing, LLM interaction, and caching.
-    *   **Browser Extension**: A Chrome extension that intercepts web content and applies real-time transformations.
+- **Filter creation by conversation.** Describe a sensitivity in the extension popup by text or by uploading an example image. An LLM asks clarifying questions when the description is ambiguous, then saves a filter with a content type (text, images, or both), a sensitivity level from 1 to 5, and a duration (permanent, 24 hours, or 1 week).
+- **Text transformation.** Matching text in a post is blurred, hidden behind a click-to-reveal warning, or rewritten. The intervention is chosen per post by an LLM.
+- **Image transformation.** A vision model picks the matching filter and shortlists interventions (blur, occlusion, warning overlay, inpainting, replacement, shrink, and stylization). The candidates are generated in parallel, scored by a separate model, and the best one replaces the original image in the page.
+- **Transparency.** Every modified element is labelled, and hidden text can be revealed by the user.
 
-2.  **Research Tools**:
-    *   **Dual-Feed System** (Section 6): A controlled simulation used in our user studies. [Live Demo](https://diy-mod.vercel.app/) | [Readme](reddit-clone/README.md)
+**How it works**
+
+| Part | Folder | Role |
+|---|---|---|
+| Browser extension | `BrowserExtension/` | Chrome (Manifest V3) extension. Intercepts the Reddit feed before it renders, sends it to the backend, and renders the transformed result. Provides the popup chat and the options page. |
+| Backend | `Backend/` | FastAPI server. Stores filters in SQLite, runs text moderation with OpenAI models during the feed request, and hands image work to Celery workers. |
+| Workers and cache | `Backend/` | Celery workers generate and score image transformations in the background. Redis is the task queue and the cache for finished images. |
+
+Text is transformed before the feed is shown. Images take longer, so the page shows a loading state on each affected image and swaps in the transformed version when it is ready.
+
+SHIELD is tested on Reddit. Video is not processed.
+
+More detail is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/backend.md`](docs/backend.md) and [`docs/extension.md`](docs/extension.md).
 
 ## Prerequisites
 
-*   **Python**: 3.8+
-*   **Node.js**: 16+
-*   **Redis**: Required for task queue and caching.
-*   **API Keys**: OpenAI (GPT-4o/GPT-4o-mini) and Google Gemini (for image processing).
+| Requirement | Notes |
+|---|---|
+| Python 3.10 or newer | 3.11 was used during development. |
+| Node.js with npm | A current LTS release, to build the extension. |
+| Redis | Must listen on `localhost:6379` (the address is fixed in the code). |
+| Google Chrome | With developer mode, to load the unpacked extension. |
+| OpenAI API key | Used for filter creation, text moderation and image analysis. |
+| Google Gemini API key | Used for image generation and scoring. |
+| AWS S3 bucket (optional) | Only if generated images should be stored in S3 instead of on local disk. |
 
-## Quick Start
+## Setup
 
-### 1. Backend Setup
-
-The backend handles the heavy lifting of content analysis and transformation.
+### 1. Clone the repository
 
 ```bash
-# 1. Clone the repository and navigate to Backend
-cd Backend
-
-# 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Configure Environment Variables
-cp .env.template .env
-# Open .env and add your OpenAI and Google API keys
+git clone https://github.com/nazeeb1432/SPL3.git
+cd SPL3
 ```
 
-### 2. Start Services
+### 2. Install the backend
 
-You will need to run the Redis server, Celery workers, and the API server simultaneously.
+```bash
+cd Backend
+python3 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+pip install google-genai        # required, but not listed in requirements.txt
+cp .env.template .env
+```
+
+Open `Backend/.env` and set real values:
+
+```bash
+OPENAI_API_KEY=your-openai-key
+GOOGLE_API_KEY=your-gemini-key
+USE_S3=false                    # store generated images in Backend/temp/uploads
+```
+
+`USE_S3` defaults to `true`. Leave it out only if you also fill in `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_STORAGE_BUCKET_NAME`; otherwise the backend stops at start-up.
+
+### 3. Start the services
+
+Run each command in its own terminal, in this order.
 
 **Terminal 1: Redis**
+
 ```bash
 redis-server
 ```
 
-**Terminal 2: Celery Worker**
+**Terminal 2: Celery worker**
+
 ```bash
 cd Backend
 source venv/bin/activate
-# Using gevent for concurrent task handling
 celery -A celery_gevent_worker worker --loglevel=info -P gevent -c 1000
 ```
 
-**Terminal 3: API Server**
+**Terminal 3: API server**
+
 ```bash
 cd Backend
 source venv/bin/activate
 python app.py
-# Server will start at http://localhost:8001
 ```
 
-### 3. Browser Extension Setup
+The server listens on port 8001. Check it with:
+
+```bash
+curl http://localhost:8001/ping
+```
+
+It should return a JSON message with `"status":"success"`.
+
+### 4. Build and load the extension
 
 ```bash
 cd BrowserExtension
@@ -90,95 +116,31 @@ npm install
 npm run build
 ```
 
-**To Load in Chrome:**
-1.  Navigate to `chrome://extensions/`.
-2.  Enable **Developer mode** (toggle in top-right).
-3.  Click **Load unpacked**.
-4.  Select the `BrowserExtension/dist` directory.
+Use `npm run build`, not `vite build` on its own: the build has extra steps the extension needs.
 
-## Configuration
+Then load it in Chrome:
 
-*   **Backend Config**: Main settings are in `Backend/config.yaml`.
-*   **Environment Variables**: API keys and secrets are managed in `Backend/.env`.
-*   **Extension Settings**: Configurable via the extension's popup interface.
+1. Open `chrome://extensions`.
+2. Switch on **Developer mode** (top right).
+3. Click **Load unpacked** and select the `BrowserExtension/dist` folder.
 
-## Research & User Study Tools [Study 2]
+### 5. Check that it works
 
-To replicate our study environment or test with the Reddit Clone:
+1. Click the extension icon, then **Options**, then **Test Connection**. The message "Test Passed! You can use DIY-MOD!!" means the extension can reach the backend.
+2. Open the popup, describe something you do not want to see, and save the filter.
+3. Open Reddit. Posts that match the filter appear transformed.
 
-### Reddit Clone Interface
+After changing extension code, run `npm run build` again and click the reload button for the extension in `chrome://extensions`.
 
-This custom frontend interacts with the DIY-MOD backend to display transformed feeds side-by-side with original content.
+### Running the API tests (optional)
 
-```bash
-cd reddit-clone
-
-# Install dependencies
-npm install
-
-# Setup Environment
-# Create .env.local if not present (see .env.production for reference keys)
-
-# Start Development Server
-npm run dev
-# Access at http://localhost:3000
-```
-
-### Creating Custom Feeds
-
-We provide scripts to generate and process custom feeds for testing:
+With Redis and the API server running:
 
 ```bash
-cd Backend
-# Create example feed data
-python process_json_custom_feed.py --create-example
-
-# Process the feed using the DIY-MOD pipeline
-python process_json_custom_feed.py custom_feed_example.json --save --user demo-user --title "Test Feed"
+cd Backend/tests
+pytest . -v                 # add -m "not llm" to skip tests that call OpenAI
 ```
 
-## Community & Support
+## Acknowledgement
 
-* **Community Page**: Join the conversation on our [GitHub Discussions](https://github.com/UMichHCI/diymod/discussions) page.
-* **Contributing**: We welcome contributions! Please review our [Contributor Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
-* **Support**: For UMich open source ecosystem support, please email [UMichOpenSourceSoftware@umich.edu](mailto:UMichOpenSourceSoftware@umich.edu).
-* **Research Lab Context**: DIY-MOD was developed by researchers at the **Social Computing Lab** at the University of Michigan. 
-
-## Citation
-
-If you use this software or our research, please cite our CHI '26 paper and/or the repository. 
-
-**Official Publication (CHI '26):**
-```bibtex
-@inproceedings{rashed2026diymod,
-  author = {Rashed, Rayhan and Jahanbakhsh, Farnaz},
-  title = {What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation},
-  year = {2026},
-  isbn = {979-8-4007-2278-3/2026/04},
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3772318.3790495},
-  doi = {10.1145/3772318.3790495},
-  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
-  location = {Barcelona, Spain},
-  series = {CHI '26}
-}
-```
-
-**arXiv Preprint:**
-```bibtex
-@article{rashed2026diymod,
-  title={What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation},
-  author={Rashed, Rayhan and Jahanbakhsh, Farnaz},
-  journal={arXiv preprint arXiv:2509.22861},
-  year={2026}
-}
-```
-
-To cite the repository directly, use the Zenodo DOI:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19042745.svg)](https://doi.org/10.5281/zenodo.19042745)
-
-## License
-
-Copyright © 2026 The Regents of the University of Michigan
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for the further details.
+SHIELD is built on [DIY-MOD](https://github.com/UMichHCI/diymod), the open-source system from the Social Computing Lab at the University of Michigan described in the CHI '26 paper *"What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation"* by Rayhan Rashed and Farnaz Jahanbakhsh ([arXiv:2509.22861](https://arxiv.org/abs/2509.22861)). DIY-MOD is Copyright © 2026 The Regents of the University of Michigan and is released under the MIT License; see [`LICENSE`](LICENSE).
