@@ -1,10 +1,5 @@
 # SHIELD: DIY Content Transformation for Safer Social Media Browsing
 
-Final project for SE-801: Software Project Lab 3, Institute of Information Technology, University of Dhaka.
-
-**Author:** Nazeeb Ahmed Chowdhury (BSSE1432)  
-**Supervisor:** Toukir Ahammed, Lecturer, IIT, University of Dhaka
-
 ## Overview
 
 Social media platforms moderate content with one set of rules for everyone, but what distresses a person is individual. A food photo is harmless to most people and a trigger for someone with an eating disorder. The tools platforms offer in response (muting keywords, blocking accounts) remove whole posts or whole people, so the user has to choose between seeing the distressing content and losing the conversation around it.
