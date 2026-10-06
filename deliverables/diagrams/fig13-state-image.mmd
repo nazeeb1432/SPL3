@@ -1,0 +1,16 @@
+stateDiagram-v2
+direction TB
+[*] --> Detected: media URL extracted
+Detected --> Unmatched: no filter matches
+Detected --> Deferred: filter matched, task enqueued
+Unmatched --> [*]: shown as posted
+Deferred --> Generating: process_image_batch
+Deferred --> Cached: cache hit
+Generating --> Scoring: a candidate succeeded
+Generating --> Failed: all candidates failed
+Scoring --> Cached: finalize_workflow
+Scoring --> Failed: all scoring failed
+Cached --> Swapped: poll returns COMPLETED
+Failed --> TimedOut: 20 polls or 160 s
+Swapped --> [*]: transformed image shown
+TimedOut --> [*]: original image stays

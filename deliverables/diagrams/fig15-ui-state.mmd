@@ -1,0 +1,16 @@
+stateDiagram-v2
+direction TB
+state "Filters view" as FV
+[*] --> INITIAL: popup opened
+INITIAL --> CLARIFYING: reply "clarify"
+INITIAL --> FILTER_CONFIG: reply "ready_for_config"
+CLARIFYING --> CLARIFYING: user answers
+CLARIFYING --> FILTER_CONFIG: reply "ready_for_config"
+FILTER_CONFIG --> CLARIFYING: Modify Filter
+FILTER_CONFIG --> COMPLETE: Save Filter succeeds
+COMPLETE --> INITIAL: Add another / I'm done
+CLARIFYING --> INITIAL: New Chat
+FILTER_CONFIG --> INITIAL: New Chat
+INITIAL --> FV: My Filters
+FV --> INITIAL: My Filters again
+FV --> FV: remove a filter

@@ -1,0 +1,26 @@
+sequenceDiagram
+autonumber
+participant E as Extension
+participant A as API server
+participant Q as Redis
+participant W as Celery worker
+participant M as Image models
+Note over A,Q: ImageProcessor runs for each post image
+A->>M: get_best_filter()
+M-->>A: best filter, top 3 interventions
+A->>Q: enqueue workflow task
+A-->>E: feed HTML, image marked DEFERRED
+Note over E,A: spinner shown on the image
+Q->>W: deliver task
+W->>Q: cache check
+W->>M: apply each candidate
+M-->>W: transformed images
+W->>M: score each candidate
+M-->>W: scores
+W->>Q: cache best result
+loop poll, at most 20 attempts
+  E->>A: GET /get_img_result
+  A->>Q: read image cache
+  A-->>E: NOT FOUND or COMPLETED + URL
+end
+Note over E,A: image replaced, indicator added

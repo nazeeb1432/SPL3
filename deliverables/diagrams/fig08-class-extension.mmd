@@ -1,0 +1,60 @@
+classDiagram
+direction LR
+class RequestInterceptor {
+  +start()
+}
+class BaseInterceptor {
+  <<abstract>>
+  #dispatchSaveBatchEvent()
+}
+class FetchInterceptor {
+  -overrideFetch()
+}
+class XhrInterceptor {
+  -overrideXHR()
+}
+class DomProcessor {
+  +initialize()
+  +processNode()
+}
+class StyleManager {
+  +loadStyles()
+  +updateCssVariables()
+}
+class ApiService {
+  +processFeed()
+  +sendChatMessage()
+  +processImage()
+  +getUserFilters()
+  +createFilter()
+  +updateFilter()
+  +deleteFilter()
+  +waitForImageProcessing()
+}
+class PopupController {
+  -handleSubmit()
+  -handleLLMResponse()
+  -handleConfigSave()
+  -toggleFiltersView()
+}
+class FilterStore {
+  +currentState
+  +filterData
+  +handleResponse()
+  +transitionTo()
+  +reset()
+}
+class PopupStateManager {
+  +saveCurrentState()
+  +restoreSavedState()
+  +clearStorageState()
+}
+RequestInterceptor *-- FetchInterceptor
+RequestInterceptor *-- XhrInterceptor
+RequestInterceptor *-- DomProcessor
+RequestInterceptor *-- StyleManager
+BaseInterceptor <|-- FetchInterceptor
+BaseInterceptor <|-- XhrInterceptor
+PopupController *-- PopupStateManager
+PopupController ..> FilterStore : state
+PopupController ..> ApiService : calls

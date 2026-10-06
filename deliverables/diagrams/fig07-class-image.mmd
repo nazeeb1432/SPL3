@@ -1,0 +1,67 @@
+classDiagram
+direction TB
+class ImageProcessor {
+  +process_image()
+}
+class ImageIntervention {
+  <<abstract>>
+  +apply(image_bytes, filters, model)
+}
+class ImageModel {
+  <<abstract>>
+  +describe_image()
+  +generate_from_prompt()
+  +edit_image()
+  +score_image()
+}
+class OpenAIModel
+class GeminiModel
+class GroundingDinoModel
+class ImageCacheManager {
+  +get_processed_value_from_cache()
+  +set_processed_value_to_cache()
+}
+class Cache {
+  <<abstract>>
+  +get()
+  +set()
+  +delete()
+}
+class RedisCache {
+  +publish()
+}
+class StorageManager {
+  +download_image()
+  +save()
+}
+class User {
+  +id
+  +email
+  +preferences
+}
+class Filter {
+  +id
+  +filter_text
+  +intensity
+  +content_type
+  +is_active
+  +expires_at
+  +is_expired
+}
+class ProcessingLog {
+  +platform
+  +content_hash
+  +matched_filters
+  +processing_time
+}
+ImageProcessor ..> ImageIntervention : enqueues (Celery)
+ImageProcessor ..> ImageCacheManager : reads
+ImageIntervention ..> ImageModel : uses
+ImageIntervention ..> StorageManager : saves result
+ImageModel <|-- OpenAIModel
+ImageModel <|-- GeminiModel
+ImageModel <|-- GroundingDinoModel
+ImageCacheManager *-- Cache
+Cache <|-- RedisCache
+User "1" *-- "many" Filter
+User "1" -- "many" ProcessingLog

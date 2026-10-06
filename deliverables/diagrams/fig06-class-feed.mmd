@@ -1,0 +1,58 @@
+classDiagram
+direction LR
+class ContentProcessor {
+  +user_id
+  +filters
+  +refresh_filters()
+  +process_post(post)
+  +work_on_feed()
+}
+class RedditProcessor {
+  +work_on_feed()
+}
+class TwitterProcessor {
+  +work_on_feed()
+}
+class Post {
+  +id
+  +title
+  +body
+  +media_urls
+  +get_combined_text()
+  +update_processed_content()
+}
+class RedditPost
+class TwitterPost
+class ContentFilter {
+  +filter_text
+  +intensity
+  +content_type
+  +expires_at
+  +to_llm_format()
+}
+class LLMProcessor {
+  +evaluate_content()
+  +select_text_intervention()
+  +process_content()
+}
+class ImageProcessor {
+  +process_image()
+}
+class FilterCreationChat {
+  +process_chat()
+}
+class VisionFilterCreator {
+  +process_image()
+}
+ContentProcessor <|-- RedditProcessor
+ContentProcessor <|-- TwitterProcessor
+ContentProcessor *-- LLMProcessor
+ContentProcessor *-- ImageProcessor
+ContentProcessor o-- ContentFilter
+Post <|-- RedditPost
+Post <|-- TwitterPost
+RedditProcessor ..> RedditPost : creates
+TwitterProcessor ..> TwitterPost : creates
+LLMProcessor ..> ContentFilter : matches
+FilterCreationChat ..> ContentFilter : proposes
+VisionFilterCreator ..> ContentFilter : proposes

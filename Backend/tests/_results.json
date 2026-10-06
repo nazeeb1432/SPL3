@@ -1,0 +1,345 @@
+{
+  "TC-01": {
+    "test": "test_ping_returns_success",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"DIY-MOD server is running\", \"timestamp\": \"2026-10-06T13:09:10.194549\"}"
+  },
+  "TC-02": {
+    "test": "test_preflight_allows_private_network",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 allow-origin=https://www.reddit.com allow-private-network=true"
+  },
+  "TC-03": {
+    "test": "test_every_response_has_private_network_header",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 allow-private-network=true"
+  },
+  "TC-04": {
+    "test": "test_get_filters_new_user_is_empty",
+    "outcome": "passed",
+    "duration": 0.02,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Found 0 filters\", \"filters\": []}"
+  },
+  "TC-05": {
+    "test": "test_get_filters_requires_user_id",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"query\", \"user_id\"], \"msg\": \"Field required\", \"input\": null}]}"
+  },
+  "TC-06": {
+    "test": "test_create_permanent_filter",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Filter created successfully\", \"filter_id\": 6}"
+  },
+  "TC-07": {
+    "test": "test_created_filter_is_listed_with_its_fields",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Found 1 filters\", \"filters\": [{\"id\": 7, \"filter_text\": \"spiders\", \"filter_type\": null, \"content_type\": \"image\", \"intensity\": 4, \"filter_metadata\": {}, \"is_temporary\": false, \"expires_at\": null}]}"
+  },
+  "TC-08": {
+    "test": "test_create_day_filter_expires_in_24_hours",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Found 1 filters\", \"filters\": [{\"id\": 8, \"filter_text\": \"election news\", \"filter_type\": null, \"content_type\": \"all\", \"intensity\": 3, \"filter_metadata\": {}, \"is_temporary\": true, \"expires_at\": \"2026-10-07T13:09:10.225517\"}]}"
+  },
+  "TC-09": {
+    "test": "test_create_week_filter_expires_in_7_days",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Found 1 filters\", \"filters\": [{\"id\": 9, \"filter_text\": \"election news\", \"filter_type\": null, \"content_type\": \"all\", \"intensity\": 3, \"filter_metadata\": {}, \"is_temporary\": true, \"expires_at\": \"2026-10-13T13:09:10.229033\"}]}"
+  },
+  "TC-10": {
+    "test": "test_create_filter_requires_filter_text",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"filter_text\"], \"msg\": \"Field required\", \"input\": {\"user_id\": \"pytest_5bd9551a_test_create_filter_requires_filter_text\", \"intensity\": 3}}]}"
+  },
+  "TC-11": {
+    "test": "test_create_filter_rejects_non_integer_intensity",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"int_parsing\", \"loc\": [\"body\", \"intensity\"], \"msg\": \"Input should be a valid integer, unable to parse string as an integer\", \"input\": \"high\"}]}"
+  },
+  "TC-12": {
+    "test": "test_create_filter_rejects_intensity_outside_1_to_5",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:170: AssertionError",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Filter created successfully\", \"filter_id\": 10}"
+  },
+  "TC-13": {
+    "test": "test_unknown_content_type_falls_back_to_all",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Found 1 filters\", \"filters\": [{\"id\": 11, \"filter_text\": \"spiders\", \"filter_type\": null, \"content_type\": \"all\", \"intensity\": 3, \"filter_metadata\": {}, \"is_temporary\": false, \"expires_at\": null}]}"
+  },
+  "TC-14": {
+    "test": "test_update_filter_changes_text_and_intensity",
+    "outcome": "passed",
+    "duration": 0.01,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Filter updated successfully\"}"
+  },
+  "TC-15": {
+    "test": "test_update_unknown_filter_returns_404",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:201: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"404: Filter not found\"}"
+  },
+  "TC-16": {
+    "test": "test_update_other_users_filter_is_refused",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:212: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"404: Filter not found\"}"
+  },
+  "TC-17": {
+    "test": "test_update_rejects_non_integer_filter_id",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"int_parsing\", \"loc\": [\"path\", \"filter_id\"], \"msg\": \"Input should be a valid integer, unable to parse string as an integer\", \"input\": \"abc\"}]}"
+  },
+  "TC-18": {
+    "test": "test_delete_filter_removes_it_from_the_list",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"Filter deleted successfully\"}"
+  },
+  "TC-19": {
+    "test": "test_delete_already_deleted_filter_returns_404",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:238: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"404: Filter not found\"}"
+  },
+  "TC-20": {
+    "test": "test_delete_requires_user_id",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"query\", \"user_id\"], \"msg\": \"Field required\", \"input\": null}]}"
+  },
+  "TC-21": {
+    "test": "test_delete_other_users_filter_is_refused",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:255: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"404: Filter not found\"}"
+  },
+  "TC-22": {
+    "test": "test_chat_returns_structured_reply",
+    "outcome": "passed",
+    "duration": 3.96,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"user_id\": \"pytest_5bd9551a_test_chat_returns_structured_reply\", \"text\": \"I understand you want to filter out pictures of spiders. Let's set up how this filter should work.\", \"type\": \"ready_for_config\", \"filter_data\": {\"filter_text\": \"pictures of spiders\", \"initial_type\": \"desc..."
+  },
+  "TC-23": {
+    "test": "test_chat_asks_to_clarify_gibberish",
+    "outcome": "passed",
+    "duration": 0.01,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"user_id\": \"pytest_5bd9551a_test_chat_asks_to_clarify_gibberish\", \"text\": \"I couldn't understand that input. Could you please describe what content you'd like to filter?\", \"type\": \"clarify\", \"options\": [\"Please describe what content you'd like to filter\", \"Tell me about specifi..."
+  },
+  "TC-24": {
+    "test": "test_chat_requires_message",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"message\"], \"msg\": \"Field required\", \"input\": {\"history\": [], \"user_id\": \"pytest_5bd9551a_test_chat_requires_message\"}}]}"
+  },
+  "TC-25": {
+    "test": "test_chat_rejects_history_that_is_not_a_list",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"list_type\", \"loc\": [\"body\", \"history\"], \"msg\": \"Input should be a valid list\", \"input\": \"none\"}]}"
+  },
+  "TC-26": {
+    "test": "test_chat_image_returns_structured_reply",
+    "outcome": "failed",
+    "duration": 2.35,
+    "error": "test_api_endpoints.py:315: AssertionError",
+    "actual": "HTTP 200 {\"status\": \"success\", \"user_id\": \"pytest_5bd9551a_test_chat_image_returns_structured_reply\", \"text\": \"The image is a solid red color. You might want to filter images with a similar solid color or specific color tones.\", \"filter_data\": {\"filter_text\": \"solid red color images\", \"content_type\": \"image\"..."
+  },
+  "TC-27": {
+    "test": "test_chat_image_tolerates_malformed_history",
+    "outcome": "passed",
+    "duration": 3.1,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"user_id\": \"pytest_5bd9551a_test_chat_image_tolerates_malformed_history\", \"text\": \"The image is a solid red color.\", \"filter_data\": {\"filter_text\": \"solid red color\", \"content_type\": \"image\"}, \"options\": [\"Specify if you want to filter specific colors.\", \"Consider if this is pa..."
+  },
+  "TC-28": {
+    "test": "test_chat_image_requires_image",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"image\"], \"msg\": \"Field required\", \"input\": null}]}"
+  },
+  "TC-29": {
+    "test": "test_feed_without_filters_is_returned_unchanged",
+    "outcome": "passed",
+    "duration": 0.06,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"feed\": {\"response\": \"<shreddit-post id=\\\"t3_0\\\" post-title=\\\"Weekend hiking photos\\\"><a slot=\\\"title\\\">Weekend hiking photos</a><a slot=\\\"text-body\\\">We walked the ridge trail on Saturday.</a></shreddit-post>\"}}"
+  },
+  "TC-30": {
+    "test": "test_feed_matching_a_text_filter_is_marked",
+    "outcome": "passed",
+    "duration": 6.06,
+    "error": "",
+    "actual": "HTTP 200 status=success markers in response: ['__OVERLAY_START__']"
+  },
+  "TC-31": {
+    "test": "test_feed_with_no_posts_returns_empty_success",
+    "outcome": "passed",
+    "duration": 0.04,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"feed\": {\"response\": \"<div>no posts here</div>\"}}"
+  },
+  "TC-32": {
+    "test": "test_feed_from_unsupported_platform_returns_400",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:385: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"400: Unsupported platform in URL\"}"
+  },
+  "TC-33": {
+    "test": "test_feed_without_feed_info_returns_400",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:392: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"400: No feed_info in data\"}"
+  },
+  "TC-34": {
+    "test": "test_feed_requires_user_id",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"user_id\"], \"msg\": \"Field required\", \"input\": {\"url\": \"https://www.reddit.com/svc/shreddit/feeds/home-feed\", \"data\": {\"feed_info\": {\"response\": \"\"}}}}]}"
+  },
+  "TC-35": {
+    "test": "test_img_result_unknown_image_is_not_found",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"NOT FOUND\"}"
+  },
+  "TC-36": {
+    "test": "test_img_result_returns_cached_url",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"COMPLETED\", \"processed_value\": \"http://localhost:8001/temp/uploads/out.png\"}"
+  },
+  "TC-37": {
+    "test": "test_img_result_includes_base64_when_cached",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"COMPLETED\", \"processed_value\": \"http://localhost:8001/temp/uploads/out.png\", \"base64_url\": \"data:image/png;base64,AAAA\"}"
+  },
+  "TC-38": {
+    "test": "test_img_result_accepts_plain_string_filter",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"COMPLETED\", \"processed_value\": \"http://localhost:8001/temp/uploads/out.png\"}"
+  },
+  "TC-39": {
+    "test": "test_img_result_requires_both_parameters",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 422 {\"detail\": [{\"type\": \"missing\", \"loc\": [\"query\", \"filters\"], \"msg\": \"Field required\", \"input\": null}]}"
+  },
+  "TC-40": {
+    "test": "test_img_base64_passes_through_external_url",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"data_url\": \"https://example.com/a.jpg\"}"
+  },
+  "TC-41": {
+    "test": "test_img_base64_missing_local_file_reports_error",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"error\", \"message\": \"Image file not found\"}"
+  },
+  "TC-42": {
+    "test": "test_user_update_creates_user_with_email",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"User information updated\", \"user\": {\"id\": \"pytest_5bd9551a_test_user_update_creates_user_with_email\", \"email\": \"first@example.com\"}}"
+  },
+  "TC-43": {
+    "test": "test_user_update_changes_email",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "HTTP 200 {\"status\": \"success\", \"message\": \"User information updated\", \"user\": {\"id\": \"pytest_5bd9551a_test_user_update_changes_email\", \"email\": \"second@example.com\"}}"
+  },
+  "TC-44": {
+    "test": "test_user_update_requires_user_id",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:509: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"400: user_id is required\"}"
+  },
+  "TC-45": {
+    "test": "test_user_update_rejects_malformed_json",
+    "outcome": "failed",
+    "duration": 0.0,
+    "error": "test_api_endpoints.py:516: AssertionError",
+    "actual": "HTTP 500 {\"status\": \"error\", \"message\": \"Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\"}"
+  },
+  "TC-46": {
+    "test": "test_ws_ping_gets_pong",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "{\"type\": \"pong\", \"timestamp\": \"2026-10-06T13:09:25.935792\"}"
+  },
+  "TC-47": {
+    "test": "test_ws_filter_update_pushes_current_filters",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "{\"type\": \"filters_updated\", \"data\": [{\"id\": 19, \"filter_text\": \"spiders\", \"filter_type\": null, \"content_type\": \"all\", \"intensity\": 3, \"filter_metadata\": {}, \"is_temporary\": false, \"expires_at\": null}]}"
+  },
+  "TC-48": {
+    "test": "test_ws_wait_for_image_returns_cached_result",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "{\"type\": \"image_processed\", \"data\": {\"image_url\": \"https://example.com/5bd9551a/ws-cached.jpg\", \"result\": \"http://localhost:8001/temp/uploads/out.png\", \"filters\": [\"spiders\"]}}"
+  },
+  "TC-49": {
+    "test": "test_ws_ignores_unknown_message_type",
+    "outcome": "passed",
+    "duration": 0.0,
+    "error": "",
+    "actual": "connection stayed open; next message: {\"type\": \"pong\", \"timestamp\": \"2026-10-06T13:09:25.944470\"}"
+  }
+}

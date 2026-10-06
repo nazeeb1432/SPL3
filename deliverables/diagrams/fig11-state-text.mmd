@@ -1,0 +1,22 @@
+stateDiagram-v2
+direction TB
+[*] --> Intercepted: feed response captured
+Intercepted --> Submitted: SaveBatch, POST /get_feed
+Submitted --> Evaluated: evaluate_content()
+Submitted --> OriginalRestored: server error
+Evaluated --> Unchanged: no filter matched
+Evaluated --> Selected: select_text_intervention()
+Selected --> BlurMarked: 1 Modify Segments
+Selected --> OverlayMarked: 2 Add Warning
+Selected --> RewriteMarked: 3 Rewrite
+Selected --> FallbackMarked: LLM error
+BlurMarked --> Returned
+OverlayMarked --> Returned
+RewriteMarked --> Returned
+FallbackMarked --> Returned
+Unchanged --> Returned
+Returned --> Rendered: CustomFeedReady, processMarkedText()
+OriginalRestored --> Rendered: original passed through
+Rendered --> Revealed: click warning overlay
+Revealed --> Rendered: click again
+Rendered --> [*]

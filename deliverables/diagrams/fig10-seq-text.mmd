@@ -1,0 +1,33 @@
+sequenceDiagram
+autonumber
+participant P as Page script
+participant C as Content script
+participant A as API /get_feed
+participant R as RedditProcessor
+participant L as LLMProcessor
+participant O as OpenAI
+P->>P: capture feed response
+P->>C: SaveBatch event
+C->>A: POST /get_feed
+A->>R: work_on_feed()
+Note over R,L: active filters loaded from filters.db
+loop each post, in parallel
+  R->>L: evaluate_content()
+  L->>O: filter evaluation prompt
+  O-->>L: matched filters
+  alt filter matched
+    R->>L: process_content()
+    L->>O: select_text_intervention
+    O-->>L: choice 1, 2 or 3
+    L->>O: generate transformed text
+    O-->>L: marker-wrapped text
+    L-->>R: text with markers
+  else no match
+    Note over R,L: post left unchanged
+  end
+  Note over R,L: processing_logs row written
+end
+R-->>A: modified feed HTML
+A-->>C: 200 feed.response
+C->>P: CustomFeedReady
+Note over P,C: DomProcessor renders the markers as blur, warning overlay or rewritten text
