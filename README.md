@@ -143,4 +143,4 @@ pytest . -v                 # add -m "not llm" to skip tests that call OpenAI
 
 ## Acknowledgement
 
-SHIELD is built on [DIY-MOD](https://github.com/UMichHCI/diymod), the open-source system from the Social Computing Lab at the University of Michigan described in the CHI '26 paper *"What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation"* by Rayhan Rashed and Farnaz Jahanbakhsh ([arXiv:2509.22861](https://arxiv.org/abs/2509.22861)). DIY-MOD is Copyright © 2026 The Regents of the University of Michigan and is released under the MIT License; see [`LICENSE`](LICENSE).
+SHIELD is built on the CHI '26 paper *"What If Moderation Didn't Mean Suppression? A Case for Personalized Content Transformation"* by Rayhan Rashed and Farnaz Jahanbakhsh ([arXiv:2509.22861](https://arxiv.org/abs/2509.22861)). DIY-MOD is Copyright © 2026 The Regents of the University of Michigan and is released under the MIT License; see [`LICENSE`](LICENSE).
